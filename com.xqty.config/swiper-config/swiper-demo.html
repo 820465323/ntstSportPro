@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .swiper-container {
+            width: 100%;
+            height: 500px;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <link rel="stylesheet" href="../swiper-4.3.5.min.css">
+</head>
+<body>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <img src="../img/1538028180(1).jpg"/></div>
+        <div class="swiper-slide">
+            <img src="../img/1538028193(1).jpg"/></div>
+        <div class="swiper-slide">
+            <img src="../img/1538028207(1).jpg"/></div>
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+
+    <!-- 如果需要导航按钮 -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <!-- 如果需要滚动条 -->
+    <div class="swiper-scrollbar"></div>
+</div>
+</body>
+<script src="js/swiper-4.3.5.min.js"></script>
+<script>
+    var mySwiper = new Swiper ('.swiper-container', {
+        //切换方式
+        effect : 'fade',
+        //水平
+        direction: 'horizontal',
+        //点击切换速度
+        speed:1000,
+        //自动切换速度
+        autoplay : {
+            delay:3000
+        },
+        loop: true,
+        // 如果需要分页器
+        /*pagination: {
+            el: '.swiper-pagination',
+            //分页器按钮
+            dynamicBullets :true,
+        },*/
+
+        // 如果需要前进后退按钮
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        // 如果需要滚动条
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+    });
+
+</script>
+</html>
