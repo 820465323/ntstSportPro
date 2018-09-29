@@ -1,46 +1,43 @@
-<!DOCTYPE  html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <style>
-        div {
-            height: 800px;
-            width: 400px;
-            border: 2px solid black;
-        }
-        h2 {
-            position: fixed;
-            margin:50px  500px;
-        }
-    </style>
+    <meta charset="UTF-8"/>
+    <title>Document</title>
+    <style type="text/css" media="screen">        .mk {
+        height: 500px;
+        width: 980px;
+        border: 1px solid #999;
+        margin: auto;
+    }
+
+    .evt_nav_right {
+        position: fixed;
+        top: 100px;
+        right: 10px;
+        width: 100px;
+    }
+
+    .evt_nav_right a {
+        display: inline-block;
+        width: 100px;
+    }    </style>
+    <script src="../com.xqty.config/node_modules/jquery/dist/jquery.js"></script>
 </head>
 <body>
-<h2>
-    <a href="#div1">to div1</a>
-    <a href="#div2">to div2</a>
-    <a href="#div3">to div3</a>
-
-    <p onclick="div1()"></p>
-</h2>
-<div id="div1">div1</div>
-<div id="div2">div2</div>
-<div id="div3">div3</div>
+<div class="evt_nav_right" style="visibility: visible;"><a ytag="20054" href="#mk01" class="evt_link1"
+                                                           title="老乔经典">老乔经典</a> <a ytag="20055" href="#mk02"
+                                                                                    class="evt_link2"
+                                                                                    title="实时爆款">实时爆款</a> <a
+        ytag="20056" href="#mk03" class="evt_link3" title="热销推荐">热销推荐</a> <a ytag="20057" href="#mk04" class="evt_link4"
+                                                                             title="主流配件">主流配件</a> <a ytag="20058"
+                                                                                                      href="#mk05"
+                                                                                                      class="evt_link5"
+                                                                                                      title="更多活动">更多活动</a>
+    <a ytag="20059" href="javascript:void(0);" class="evt_link0" title="返回顶部"> </a></div>
+<div class="mk" id="mk01">mk01mk01</div>
+<div class="mk" id="mk02">mk02mk02</div>
+<div class="mk" id="mk03">mk03mk03</div>
+<div class="mk" id="mk04">mk04mk04</div>
+<div class="mk" id="mk05">mk05mk05</div>
 </body>
-<script>
-    $("#div1Link").click(function() {
-        $("html, body").animate({
-            scrollTop: $("#div1").offset().top }, {duration: 500,easing: "swing"});
-        return false;
-    });
-
-    $("#div2Link").click(function() {
-        $("html, body").animate({
-            scrollTop: $("#div2").offset().top }, {duration: 500,easing: "swing"});
-        return false;
-    });
-    $("#div3Link").click(function() {
-        $("html, body").animate({
-            scrollTop: $("#div3").offset().top }, {duration: 500,easing: "swing"});
-        return false;
-    });
-</script>
 </html>

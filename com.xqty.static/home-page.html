@@ -14,7 +14,7 @@
 
         a {
             text-decoration: none;
-            color: red;
+            color: black;
             font-size: 20px;
         }
 
@@ -32,7 +32,7 @@
             width: 100%;
             height: 100%;
             border: 1px solid red;
-            background-color: floralwhite;
+            background-color: gainsboro;
             text-align: center;
         }
 
@@ -42,63 +42,99 @@
             height: 500px;
             background-color: grey;
             margin-left: 30%;
-            margin-top: 5%;
+            margin-top: 20px;
+        }
+        .nav-div{
+            z-index: 999;position: absolute;border: 1px solid red;
+            height: 60px;width: 100%;background-color: transparent;
+            transition: all 1s;text-align: right;opacity:.9
+        }
+        .nav-div:hover{
+            background-color: darkgrey;
+        }
+        .nav-div>.nav-div2>.nav-div3{
+            position: absolute;
+            border: 1px solid red;
+            width: 30%;
+            height: 100%;
+            margin-left: -90px;
+            margin-top: -10px;
+        }
+        .nav-div>.nav-div2>.nav-div3>img{
+            height: 100%;
+            width: 20%;
+        }
+        .nav-div>.nav-div2>.nav-div4{
+            margin-right: 50px;
+            margin-top: 10px;
         }
     </style>
     <link rel="stylesheet" href="../com.xqty.config/swiper-config/css/swiper-4.3.5.min.css">
 </head>
 <body>
-<div style="z-index: 999;position: absolute;margin-left: 50%">
-        <div>
-            <a href="">
-            新清体育
-            </a>
-        <div/>
+<div class="nav-div">
+    <div class="nav-div2">
+            <div class="nav-div3">
+                <img src="../com.xqty.config/img-config/1538028207(1).jpg"/>
+            </div>
 
-        <div>
-            <a href="">
-            新清文化
+        <div class="nav-div4">
+            <a id="nav-a1" href="#divOne">
+                我们关于
             </a>
-         <div/>
 
-         <div>
-                <a href="">
-             新清福利
-                </a>
-         <div/>
-
-        <div>
-            <a href="">
-             关于我们
+            <a id="nav-a2" href="">
+                新清文化
             </a>
-        <div/>
+
+            <a id="nav-a3" href="#div3">
+                新清体育
+            </a>
+
+            <a id="nav-a4" href="#div4">
+                我们的家
+            </a>
+        </div>
+    </div>
 </div>
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
+                        <div class="swiper-slide" id="divOne">
                             <div>
-                                <div class="swiper-slide2">
-                                    one
+                                <div style="border: 1px solid yellow;width: 200px;height: 200px;background-color: yellow;position: absolute">
+
+                                </div>
+                                <div id="slide1" class="swiper-slide2" data-hash="slide1">
+                                    关于我们
                                 </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div>
-                                <div class="swiper-slide2" style="background-color: #007aff">
+                            <div style="background-color: red">
+                                <div style="border: 1px solid yellow;width: 200px;height: 200px;background-color: greenyellow;position: absolute">
+
+                                </div>
+                                <div id="div2" class="swiper-slide2" style="background-color: #007aff">
                                     two
                                 </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div>
-                                <div class="swiper-slide2" style="background-color: indigo">
+                            <div style="background-color: tan">
+                                <div style="border: 1px solid olive;width: 200px;height: 200px;background-color: maroon;position: absolute">
+
+                                </div>
+                                <div id="div3" class="swiper-slide2" style="background-color: indigo">
                                     three
                                 </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div>
-                                <div class="swiper-slide2" style="background-color: brown">
+                            <div style="background-color: powderblue">
+                                <div style="border: 1px solid indigo;width: 200px;height: 200px;background-color: navy;position: absolute">
+
+                                </div>
+                                <div id="div4" class="swiper-slide2" style="background-color: brown">
                                     four
                                 </div>
                             </div>
@@ -116,39 +152,12 @@
                 </div>
 </body>
 <script src="../com.xqty.config/swiper-config/js/swiper-4.3.5.min.js"></script>
+<script src="../com.xqty.config/swiper-config/swiper.js"></script>
+<script src="../com.xqty.config/node_modules/jquery/dist/jquery.js"></script>
 <script>
-    var mySwiper = new Swiper('.swiper-container', {
-        //鼠标滑动切换
-        mousewheel: true,
-        //切换方式
-        effect: 'fade',
-        //滑动方向
-        direction: 'vertical',
-        //点击切换速度
-        speed: 1000,
-        //自动切换速度
-        autoplay: {
-            delay: 3000
-        },
-        loop: true,
-        // 如果需要分页器
-        pagination: {
-            el: '.swiper-pagination',
-            //分页器按钮
-            dynamicBullets: true,
-        },
-
-        // 如果需要前进后退按钮
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-
-        // 如果需要滚动条
-        scrollbar: {
-            hide: false,
-        },
-    });
-
+    $('#nav-a1').click(function(){
+        //切换到第一个slide，速度为1秒
+        mySwiper.slideTo(2, 1000, false);
+    })
 </script>
 </html>
