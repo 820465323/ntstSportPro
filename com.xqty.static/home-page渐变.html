@@ -79,11 +79,11 @@
             </div>
 
         <div class="nav-div4">
-            <a id="nav-a1" href="#divOne">
+            <a id="nav-a1" href="#div1">
                 我们关于
             </a>
 
-            <a id="nav-a2" href="">
+            <a id="nav-a2" href="#div2">
                 新清文化
             </a>
 
@@ -99,42 +99,42 @@
 </div>
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide" id="divOne">
+                        <div class="swiper-slide" id="div1" style="height: 800px">
                             <div>
                                 <div style="border: 1px solid yellow;width: 200px;height: 200px;background-color: yellow;position: absolute">
 
                                 </div>
-                                <div id="slide1" class="swiper-slide2" data-hash="slide1">
+                                <div  class="swiper-slide2" data-hash="slide1">
                                     关于我们
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div style="background-color: red">
+                        <div class="swiper-slide" id="div2">
+                            <div style="background-color: red" >
                                 <div style="border: 1px solid yellow;width: 200px;height: 200px;background-color: greenyellow;position: absolute">
 
                                 </div>
-                                <div id="div2" class="swiper-slide2" style="background-color: #007aff">
+                                <div  class="swiper-slide2" style="background-color: #007aff">
                                     two
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div style="background-color: tan">
+                        <div class="swiper-slide" id="div3">
+                            <div style="background-color: tan" >
                                 <div style="border: 1px solid olive;width: 200px;height: 200px;background-color: maroon;position: absolute">
 
                                 </div>
-                                <div id="div3" class="swiper-slide2" style="background-color: indigo">
+                                <div  class="swiper-slide2" style="background-color: indigo">
                                     three
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div style="background-color: powderblue">
+                        <div class="swiper-slide" id="div4">
+                            <div style="background-color: powderblue" >
                                 <div style="border: 1px solid indigo;width: 200px;height: 200px;background-color: navy;position: absolute">
 
                                 </div>
-                                <div id="div4" class="swiper-slide2" style="background-color: brown">
+                                <div  class="swiper-slide2" style="background-color: brown">
                                     four
                                 </div>
                             </div>
@@ -155,9 +155,6 @@
 <script src="../com.xqty.config/swiper-config/swiper.js"></script>
 <script src="../com.xqty.config/node_modules/jquery/dist/jquery.js"></script>
 <script>
-    $('#nav-a1').click(function(){
-        //切换到第一个slide，速度为1秒
-        mySwiper.slideTo(2, 1000, false);
-    })
+
 </script>
 </html>
