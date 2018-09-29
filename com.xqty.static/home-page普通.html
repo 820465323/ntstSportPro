@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        .box{
+            border: 1px solid red;
+            width: 100%;
+            height: 500px;
+        }
+        nav>.nav-div{
+            width: 100%;
+            height: 80px;
+            opacity: .4;
+            background-color: darkgrey;
+            position: fixed;
+            transition: all 1s;
+
+        }
+        nav:hover>div{
+            opacity: .9;
+        }
+    </style>
+    <script src="../com.xqty.config/node_modules/jquery/dist/jquery.js"></script>
+</head>
+<body style="">
+    <nav style="position: fixed;">
+        <div class="nav-div">
+        </div>
+        <div class="nav-div2" style="position: fixed;min-width: 1200px;overflow: auto">
+            <div style="margin-top: 20px;margin-left: 70%;">
+                <a href="#box1" id="nav-a1" style="color:red">新清健康</a>
+                <a href="#box2" id="nav-a2">关于我们</a>
+                <a href="#box3" id="nav-a3">新清体育</a>
+                <a href="#box4" id="nav-a4">新清家庭</a>
+            </div>
+        </div>
+    </nav>
+    <div class="box" id="box1" style="background-color: peru">
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    </div>
+    <div class="box" id="box2" style="background-color: #999999"></div>
+    <div class="box" id="box3" style="background-color: #007aff"></div>
+    <div class="box" id="box4" style="background-color: navy"></div>
+</body>
+<script>
+    //锚点定位效果
+    $('a').click(function () {
+        $('html,body').animate({scrollTop: ($($(this).attr('href')).offset().top -50)},500);
+    });
+
+    //a标签点击高亮效果
+    $('#nav-a1').click(function () {
+        var nav1 = document.querySelector('#nav-a1');
+        nav1.style = 'color:red;';
+        var nav2 = document.querySelector('#nav-a2');
+        var nav3 = document.querySelector('#nav-a3');
+        var nav4 = document.querySelector('#nav-a4');
+        nav2.style='color: black;';
+        nav3.style='color: black;';
+        nav4.style='color: black;';
+    });
+    $('#nav-a2').click(function () {
+        var nav2 = document.querySelector('#nav-a2');
+        nav2.style = 'color:red;';
+        var nav1 = document.querySelector('#nav-a1');
+        var nav3 = document.querySelector('#nav-a3');
+        var nav4 = document.querySelector('#nav-a4');
+        nav1.style='color: black;';
+        nav3.style='color: black;';
+        nav4.style='color: black;';
+    });
+    $('#nav-a3').click(function () {
+        var nav3 = document.querySelector('#nav-a3');
+        nav3.style = 'color:red;';
+        var nav1 = document.querySelector('#nav-a1');
+        var nav2 = document.querySelector('#nav-a2');
+        var nav4 = document.querySelector('#nav-a4');
+        nav1.style='color: black;';
+        nav2.style='color: black;';
+        nav4.style='color: black;';
+    });
+    $('#nav-a4').click(function () {
+        var nav4 = document.querySelector('#nav-a4');
+        nav4.style = 'color:red;;';
+        var nav1 = document.querySelector('#nav-a1');
+        var nav2 = document.querySelector('#nav-a2');
+        var nav3 = document.querySelector('#nav-a3');
+        nav1.style='color: black;';
+        nav2.style='color: black;';
+        nav3.style='color: black;';
+    });
+    //根据滚动距离设置导航栏高亮
+    window.onscroll = function () {
+        console.log(window.scrollY);
+        if(window.scrollY>500&&window.scrollY<900){
+            var nav2 = document.querySelector('#nav-a2');
+            nav2.style = 'color:red;';
+            var nav1 = document.querySelector('#nav-a1');
+            var nav3 = document.querySelector('#nav-a3');
+            var nav4 = document.querySelector('#nav-a4');
+            nav1.style='color: black;';
+            nav3.style='color: black;';
+            nav4.style='color: black;';
+        }else if(window.scrollY>900&&window.scrollY<1200){
+            var nav3 = document.querySelector('#nav-a3');
+            nav3.style = 'color:red;';
+            var nav1 = document.querySelector('#nav-a1');
+            var nav2 = document.querySelector('#nav-a2');
+            var nav4 = document.querySelector('#nav-a4');
+            nav1.style='color: black;';
+            nav2.style='color: black;';
+            nav4.style='color: black;';
+        }else if(window.scrollY>1200){
+            var nav4 = document.querySelector('#nav-a4');
+            nav4.style = 'color:red;;';
+            var nav1 = document.querySelector('#nav-a1');
+            var nav2 = document.querySelector('#nav-a2');
+            var nav3 = document.querySelector('#nav-a3');
+            nav1.style='color: black;';
+            nav2.style='color: black;';
+            nav3.style='color: black;';
+        }else if(window.scrollY<100){
+            var nav1 = document.querySelector('#nav-a1');
+            nav1.style = 'color:red;';
+            var nav2 = document.querySelector('#nav-a2');
+            var nav3 = document.querySelector('#nav-a3');
+            var nav4 = document.querySelector('#nav-a4');
+            nav2.style='color: black;';
+            nav3.style='color: black;';
+            nav4.style='color: black;';
+        }
+    }
+</script>
+</html>
