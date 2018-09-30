@@ -79,8 +79,8 @@
             </div>
 
         <div class="nav-div4">
-            <a id="nav-a1" href="#div1">
-                我们关于
+            <a id="nav-a1" href="#div1" style="color: yellow">
+                关于我们
             </a>
 
             <a id="nav-a2" href="#div2">
@@ -88,54 +88,54 @@
             </a>
 
             <a id="nav-a3" href="#div3">
-                新清体育
+                新清科技
             </a>
 
             <a id="nav-a4" href="#div4">
-                我们的家
+                新清蛋壳
             </a>
         </div>
     </div>
 </div>
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide" id="div1" style="height: 800px">
-                            <div>
+                        <div class="swiper-slide"  style="height: 800px" id="div1" data-hash="div1">
+                            <div >
                                 <div style="border: 1px solid yellow;width: 200px;height: 200px;background-color: yellow;position: absolute">
 
                                 </div>
-                                <div  class="swiper-slide2" data-hash="slide1">
+                                <div  class="swiper-slide2" >
                                     关于我们
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide" id="div2">
+                        <div class="swiper-slide" style="height: 800px" id="div2" data-hash="div2">
                             <div style="background-color: red" >
                                 <div style="border: 1px solid yellow;width: 200px;height: 200px;background-color: greenyellow;position: absolute">
 
                                 </div>
                                 <div  class="swiper-slide2" style="background-color: #007aff">
-                                    two
+                                    新清文化
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide" id="div3">
-                            <div style="background-color: tan" >
+                        <div class="swiper-slide" style="height: 800px" id="div3" data-hash="div3">
+                            <div style="background-color: tan">
                                 <div style="border: 1px solid olive;width: 200px;height: 200px;background-color: maroon;position: absolute">
 
                                 </div>
                                 <div  class="swiper-slide2" style="background-color: indigo">
-                                    three
+                                    新清体育
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide" id="div4">
-                            <div style="background-color: powderblue" >
+                        <div class="swiper-slide" style="height: 800px" id="div4" data-hash="div4">
+                            <div style="background-color: powderblue">
                                 <div style="border: 1px solid indigo;width: 200px;height: 200px;background-color: navy;position: absolute">
 
                                 </div>
                                 <div  class="swiper-slide2" style="background-color: brown">
-                                    four
+                                    我们的家
                                 </div>
                             </div>
                         </div>
@@ -143,18 +143,30 @@
                     <!-- 如果需要分页器 -->
                     <div class="swiper-pagination"></div>
 
-                    <!-- 如果需要导航按钮 -->
+                    <!-- 如果需要导航按钮
                     <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-next"></div>-->
 
-                    <!-- 如果需要滚动条 -->
-                    <div class="swiper-scrollbar"></div>
+                    <!--&lt;!&ndash; 如果需要滚动条 &ndash;&gt;
+                    <div class="swiper-scrollbar"></div>-->
                 </div>
 </body>
 <script src="../com.xqty.config/swiper-config/js/swiper-4.3.5.min.js"></script>
 <script src="../com.xqty.config/swiper-config/swiper.js"></script>
 <script src="../com.xqty.config/node_modules/jquery/dist/jquery.js"></script>
 <script>
-
+    //a标签点击高亮效果
+    $('#nav-a1').click(function () {
+        var nav1 = document.querySelector('#nav-a1');
+        nav1.style = 'color:yellow;';
+        var nav2 = document.querySelector('#nav-a2');
+        nav2.style='color: black;';
+    });
+    $('#nav-a2').click(function () {
+        var nav2 = document.querySelector('#nav-a2');
+        nav2.style = 'color:yellow;';
+        var nav1 = document.querySelector('#nav-a1');
+        nav1.style='color: black;';
+    });
 </script>
 </html>
