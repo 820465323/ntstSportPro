@@ -45,9 +45,9 @@
             margin-top: 20px;
         }
         .nav-div{
-            z-index: 999;position: absolute;border: 1px solid red;
+            z-index: 9999;position: fixed;border: 1px solid red;
             height: 60px;width: 100%;background-color: transparent;
-            transition: all 1s;text-align: right;opacity:.9
+            transition: all 1s;text-align: right;opacity:.9;
         }
         .nav-div:hover{
             background-color: darkgrey;
@@ -97,9 +97,24 @@
         </div>
     </div>
 </div>
+
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"  style="height: 800px" id="div1" data-hash="div1">
+
+                        <div class="swiper-slide"  style="height: 959px" id="div0">
+                        <!--长图-->
+                            <div style="overflow: auto">
+                                <div style="border: 1px solid yellow;width: 200px;height: 200px;background-color: yellow;position: absolute">
+
+                                </div>
+                                <div  class="swiper-slide2" style="height: 900px">
+                                    大长图
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--swiper锚点跳转配置-->
+                        <div class="swiper-slide"  style="height: 659px" id="div1" data-hash="div1">
                             <div >
                                 <div style="border: 1px solid yellow;width: 200px;height: 200px;background-color: yellow;position: absolute">
 
@@ -109,7 +124,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide" style="height: 800px" id="div2" data-hash="div2">
+                        <div class="swiper-slide" style="height: 659px" id="div2" data-hash="div2">
                             <div style="background-color: red" >
                                 <div style="border: 1px solid yellow;width: 200px;height: 200px;background-color: greenyellow;position: absolute">
 
@@ -119,7 +134,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide" style="height: 800px" id="div3" data-hash="div3">
+                        <div class="swiper-slide" style="height: 659px" id="div3" data-hash="div3">
                             <div style="background-color: tan">
                                 <div style="border: 1px solid olive;width: 200px;height: 200px;background-color: maroon;position: absolute">
 
@@ -129,7 +144,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide" style="height: 800px" id="div4" data-hash="div4">
+                        <div class="swiper-slide" style="height: 659px" id="div4" data-hash="div4">
                             <div style="background-color: powderblue">
                                 <div style="border: 1px solid indigo;width: 200px;height: 200px;background-color: navy;position: absolute">
 
@@ -150,7 +165,7 @@
                     <!--&lt;!&ndash; 如果需要滚动条 &ndash;&gt;
                     <div class="swiper-scrollbar"></div>-->
                 </div>
-</body>
+    </body>
 <script src="../com.xqty.config/swiper-config/js/swiper-4.3.5.min.js"></script>
 <script src="../com.xqty.config/swiper-config/swiper.js"></script>
 <script src="../com.xqty.config/node_modules/jquery/dist/jquery.js"></script>

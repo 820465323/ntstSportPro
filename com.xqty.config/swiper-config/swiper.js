@@ -6,25 +6,27 @@ var mySwiper = new Swiper ('.swiper-container', {
                 var nav = document.querySelector('#nav-a2');
                 nav.style='color:yellow';
                 var nav = document.querySelector('#nav-a1');
-                nav.style='color:block'
+                nav.style='color:block';
             }else if(translate=='0'){
                 var nav = document.querySelector('#nav-a2');
                 nav.style='color:block';
                 var nav = document.querySelector('#nav-a1');
-                nav.style='color:yellow'
+                nav.style='color:yellow';
             }
         },
     },
     //切换方式
     effect : 'fade',
+    fadeEffect: {
+        crossFade: true,
+    },
     //轮播顺序
     direction : 'vertical',
     hashNavigation: {
         watchState: true
     },
     loop:false,
-    //鼠标切换
-    mousewheel: true,
+    mousewheel:true,
     //点击切换速度
     speed:1000,
     //自动切换速度
@@ -36,8 +38,8 @@ var mySwiper = new Swiper ('.swiper-container', {
         el: '.swiper-pagination',
         //分页器按钮
         dynamicBullets :true,
-        clickable:true
-    },
+        clickable:true,
+    }
     // 如果需要前进后退按钮
    /* navigation: {
         nextEl: '.swiper-button-next',
