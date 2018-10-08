@@ -68,6 +68,23 @@
             margin-right: 50px;
             margin-top: 10px;
         }
+        #swiper-slide{
+            position: absolute;
+            margin-top: 40%;
+            margin-left: 20%;
+            border: 1px solid brown;
+            width: 300px;
+            height: 400px;
+            background-color: #cccccc;
+        }
+        #swiper-slide2{
+            position: absolute;
+            top: 20%;
+            left: -20%;
+            border: 1px solid brown;
+            width: 300px;
+            height: 400px;
+        }
     </style>
     <link rel="stylesheet" href="../com.xqty.config/swiper-config/css/swiper-4.3.5.min.css">
 </head>
@@ -84,15 +101,19 @@
             </a>
 
             <a id="nav-a2" href="#div2">
-                新清文化
+                健康监测
             </a>
 
             <a id="nav-a3" href="#div3">
-                新清科技
+                体育科技
             </a>
 
             <a id="nav-a4" href="#div4">
-                新清蛋壳
+                联系我们
+            </a>
+
+            <a id="nav-a5" href="#div5">
+                后台检测
             </a>
         </div>
     </div>
@@ -101,56 +122,45 @@
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
 
-                        <div class="swiper-slide"  style="height: 959px" id="div0">
+                        <div class="swiper-slide swiper-no-swiping"  style="height: 959px" id="div1" data-hash="div1">
                         <!--长图-->
-                            <div style="overflow: auto">
-                                <div style="border: 1px solid yellow;width: 200px;height: 200px;background-color: yellow;position: absolute">
-
-                                </div>
+                            <div style="" id="scroll-one">
                                 <div  class="swiper-slide2" style="height: 900px">
-                                    大长图
+                                    关于我们
                                 </div>
                             </div>
                         </div>
 
                         <!--swiper锚点跳转配置-->
-                        <div class="swiper-slide"  style="height: 659px" id="div1" data-hash="div1">
-                            <div >
-                                <div style="border: 1px solid yellow;width: 200px;height: 200px;background-color: yellow;position: absolute">
+                        <div class="swiper-slide"  style="height: 659px" id="div2" data-hash="div2">
+                            <div style="overflow: hidden">
+                                <div  id="swiper-slide">
+                                    健康监测
+                                </div>
 
-                                </div>
-                                <div  class="swiper-slide2" >
-                                    关于我们
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide" style="height: 659px" id="div2" data-hash="div2">
-                            <div style="background-color: red" >
-                                <div style="border: 1px solid yellow;width: 200px;height: 200px;background-color: greenyellow;position: absolute">
-
-                                </div>
-                                <div  class="swiper-slide2" style="background-color: #007aff">
-                                    新清文化
+                                <div id="swiper-slide2">
+                                    健康监测2
                                 </div>
                             </div>
                         </div>
                         <div class="swiper-slide" style="height: 659px" id="div3" data-hash="div3">
-                            <div style="background-color: tan">
-                                <div style="border: 1px solid olive;width: 200px;height: 200px;background-color: maroon;position: absolute">
-
-                                </div>
-                                <div  class="swiper-slide2" style="background-color: indigo">
-                                    新清体育
+                            <div style="background-color: red" >
+                                <div  class="swiper-slide2" style="background-color: #007aff">
+                                    体育科技
                                 </div>
                             </div>
                         </div>
                         <div class="swiper-slide" style="height: 659px" id="div4" data-hash="div4">
-                            <div style="background-color: powderblue">
-                                <div style="border: 1px solid indigo;width: 200px;height: 200px;background-color: navy;position: absolute">
-
+                            <div style="background-color: tan">
+                                <div  class="swiper-slide2" style="background-color: indigo">
+                                    联系我们
                                 </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" style="height: 659px" id="div5" data-hash="div5">
+                            <div style="background-color: powderblue">
                                 <div  class="swiper-slide2" style="background-color: brown">
-                                    我们的家
+                                    后台检测
                                 </div>
                             </div>
                         </div>
@@ -170,18 +180,32 @@
 <script src="../com.xqty.config/swiper-config/swiper.js"></script>
 <script src="../com.xqty.config/node_modules/jquery/dist/jquery.js"></script>
 <script>
+    //获取节点
+    var nav1 = document.querySelector('#nav-a1');
+    var nav2 = document.querySelector('#nav-a2');
+    var pro1 = document.querySelector('#swiper-slide');
+    var pro2 = document.querySelector('#swiper-slide2');
+    var scroll2 = document.querySelector('#scroll-one');
     //a标签点击高亮效果
     $('#nav-a1').click(function () {
-        var nav1 = document.querySelector('#nav-a1');
         nav1.style = 'color:yellow;';
-        var nav2 = document.querySelector('#nav-a2');
         nav2.style='color: black;';
     });
     $('#nav-a2').click(function () {
-        var nav2 = document.querySelector('#nav-a2');
         nav2.style = 'color:yellow;';
-        var nav1 = document.querySelector('#nav-a1');
+        pro1.style='transform: translateY(-100%);transition:all 1.5s;';
+        pro2.style='transform: translateX(100%);transition:all 1.9s;';
         nav1.style='color: black;';
     });
+    //获取div内部滚动距离
+    /*scroll2.onscroll = function (e) {
+        console.log(scroll2.scrollTop);
+        if(scroll2.scrollTop<280){
+            mySwiper.mousewheel.disable();
+        }else {
+            mySwiper.mousewheel.enable();
+            alert('开启了鼠标滑轮')
+        }
+    }*/
 </script>
 </html>

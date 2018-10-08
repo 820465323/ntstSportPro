@@ -2,16 +2,20 @@ var mySwiper = new Swiper ('.swiper-container', {
     //监听swiper偏移量
     on:{
         setTranslate: function(translate){
+            var nav1 = document.querySelector('#nav-a1');
+            var nav2 = document.querySelector('#nav-a2');
+            var pro1 = document.querySelector('#swiper-slide');
+            var pro2 = document.querySelector('#swiper-slide2');
             if(translate=='-657'){
-                var nav = document.querySelector('#nav-a2');
-                nav.style='color:yellow';
-                var nav = document.querySelector('#nav-a1');
-                nav.style='color:block';
+                nav2.style='color:yellow';
+                pro1.style='transform: translateY(-100%);transition:all 1.5s;display:block';
+                pro2.style='transform: translateX(100%);transition:all 1.9s;';
+                nav1.style='color:block';
             }else if(translate=='0'){
-                var nav = document.querySelector('#nav-a2');
-                nav.style='color:block';
-                var nav = document.querySelector('#nav-a1');
-                nav.style='color:yellow';
+                nav2.style='color:block';
+                pro1.style='position: absolute;margin-top: 40%;border: 1px solid brown;width: 300px;height: 400px;';
+                pro2.style='position: absolute;top: 20%;left: -20%;border: 1px solid brown;width: 300px;height: 400px;';
+                nav1.style='color:yellow';
             }
         },
     },
