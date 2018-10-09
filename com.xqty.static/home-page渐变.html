@@ -5,7 +5,6 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
     <title>Document</title>
     <style>
         * {
@@ -185,6 +184,11 @@
 <script src="../com.xqty.config/swiper-config/swiper.js"></script>
 <script src="../com.xqty.config/node_modules/jquery/dist/jquery.js"></script>
 <script>
+    //每次刷新页面指定跳转路径
+    window.onload=function(){
+        location.href = "#div1";
+    }
+
     //获取节点
     var nav1 = document.querySelector('#nav-a1');
     var nav2 = document.querySelector('#nav-a2');
@@ -219,5 +223,6 @@
             }
         });
     });
+
 </script>
 </html>

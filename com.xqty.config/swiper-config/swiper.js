@@ -17,14 +17,16 @@ var mySwiper = new Swiper ('.swiper-container', {
                 pro2.style='position: absolute;top: 20%;left: -30%;border: 1px solid brown;width: 300px;height: 400px;';
                 nav1.style='color:yellow';
             }
-        },
-        slideChangeTransitionStart: function(){
-            if(this.activeIndex==0){
-                mySwiper.mousewheel.disable();
-            }else if(this.activeIndex!=0){
-                mySwiper.mousewheel.enable();
-            }
-        },
+            setTimeout(function () {
+                //获取当前模块的索引进行判断
+                if(mySwiper.activeIndex==0){
+                    mySwiper.mousewheel.disable();
+                }else if(mySwiper.activeIndex!=0){
+                    console.log('!=0!=0');
+                    mySwiper.mousewheel.enable();
+                }
+            },1);
+        }
     },
     //切换方式
     effect : 'fade',
