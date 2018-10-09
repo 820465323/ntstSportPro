@@ -5,6 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
     <title>Document</title>
     <style>
         * {
@@ -23,11 +24,6 @@
             height: 657px;
         }
 
-        body {
-            overflow: scroll;
-            overflow-x: hidden;
-        }
-
         .swiper-slide > div {
             width: 100%;
             height: 100%;
@@ -38,11 +34,10 @@
 
         .swiper-slide2 {
             border: 1px solid;
-            width: 500px;
-            height: 500px;
+            width: 80%;
+            margin-left: 10%;
             background-color: grey;
-            margin-left: 30%;
-            margin-top: 20px;
+            height: 630px;
         }
         .nav-div{
             z-index: 9999;position: fixed;border: 1px solid red;
@@ -89,7 +84,7 @@
     <link rel="stylesheet" href="../com.xqty.config/swiper-config/css/swiper-4.3.5.min.css">
 </head>
 <body>
-<div class="nav-div">
+<div class="nav-div" style="min-width: 1366px;">
     <div class="nav-div2">
             <div class="nav-div3">
                 <img src="../com.xqty.config/img-config/1538028207(1).jpg"/>
@@ -119,15 +114,26 @@
     </div>
 </div>
 
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-
-                        <div class="swiper-slide swiper-no-swiping"  style="height: 959px" id="div1" data-hash="div1">
+                <div class="swiper-container" style="min-width: 1366px;">
+                    <div class="swiper-wrapper" style="height: 100%">
+                        <div class="swiper-slide swiper-no-swiping"  style="height: 659px;overflow: scroll" id="div1" data-hash="div1">
                         <!--长图-->
-                            <div style="" id="scroll-one">
-                                <div  class="swiper-slide2" style="height: 900px">
-                                    关于我们
-                                </div>
+                            <div style="border:1px solid maroon;width:100%;height:100%;" class="scroll-one">
+                                <div style="border: 1px solid navy;background-color: transparent;width: 100%;height: 765px;">
+                                    <img src="../com.xqty.config/img-config/1.jpg" style="width: 100%;height: 100%"></div>
+
+                            </div>
+                            <div style="border: 1px solid navy;background-color: olive;width: 100%;height: 800px;">
+
+                            </div>
+                            <div style="border: 1px solid navy;background-color: maroon;width: 100%;height: 800px;">
+                                <img src="../com.xqty.config/img-config/2.jpg" style="width: 100%;height: 100%"/>
+                            </div>
+                            <div style="border: 1px solid navy;background-color: gray;width: 100%;height: 800px;">
+
+                            </div>
+                            <div style="border: 1px solid navy;background-color: rosybrown;width: 100%;height: 800px;">
+
                             </div>
                         </div>
 
@@ -166,8 +172,7 @@
                         </div>
                     </div>
                     <!-- 如果需要分页器 -->
-                    <div class="swiper-pagination"></div>
-
+                    <div class="swiper-pagination" style="margin-right: 10%"></div>
                     <!-- 如果需要导航按钮
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>-->
@@ -197,15 +202,22 @@
         pro2.style='transform: translateX(100%);transition:all 1.9s;';
         nav1.style='color: black;';
     });
-    //获取div内部滚动距离
-    /*scroll2.onscroll = function (e) {
-        console.log(scroll2.scrollTop);
-        if(scroll2.scrollTop<280){
-            mySwiper.mousewheel.disable();
-        }else {
-            mySwiper.mousewheel.enable();
-            alert('开启了鼠标滑轮')
-        }
-    }*/
+
+    //禁止用户对页面放大缩小
+    $(document).ready(function () {
+        // chrome 浏览器直接加上下面这个样式就行了，但是ff不识别
+        $('body').css('zoom', 'reset');
+        $(document).keydown(function (event) {
+            //event.metaKey mac的command键
+            if ((event.ctrlKey === true || event.metaKey === true)&& (event.which === 61 || event.which === 107 || event.which === 173 || event.which === 109 || event.which === 187  || event.which === 189)){
+                event.preventDefault();
+            }
+        });
+        $(window).bind('mousewheel DOMMouseScroll', function (event) {
+            if (event.ctrlKey === true || event.metaKey) {
+                event.preventDefault();
+            }
+        });
+    });
 </script>
 </html>

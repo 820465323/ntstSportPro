@@ -13,9 +13,16 @@ var mySwiper = new Swiper ('.swiper-container', {
                 nav1.style='color:block';
             }else if(translate=='0'){
                 nav2.style='color:block';
-                pro1.style='position: absolute;margin-top: 40%;border: 1px solid brown;width: 300px;height: 400px;';
-                pro2.style='position: absolute;top: 20%;left: -20%;border: 1px solid brown;width: 300px;height: 400px;';
+                pro1.style='position: absolute;margin-top: 60%;border: 1px solid brown;width: 300px;height: 400px;';
+                pro2.style='position: absolute;top: 20%;left: -30%;border: 1px solid brown;width: 300px;height: 400px;';
                 nav1.style='color:yellow';
+            }
+        },
+        slideChangeTransitionStart: function(){
+            if(this.activeIndex==0){
+                mySwiper.mousewheel.disable();
+            }else if(this.activeIndex!=0){
+                mySwiper.mousewheel.enable();
             }
         },
     },
@@ -30,9 +37,10 @@ var mySwiper = new Swiper ('.swiper-container', {
         watchState: true
     },
     loop:false,
-    mousewheel:true,
     //点击切换速度
     speed:1000,
+    //鼠标滑轮控制
+    mousewheel: true,
     //自动切换速度
    /* autoplay : {
         delay:3000
@@ -43,6 +51,7 @@ var mySwiper = new Swiper ('.swiper-container', {
         //分页器按钮
         dynamicBullets :true,
         clickable:true,
+        hiddenClass : 'oneone'
     }
     // 如果需要前进后退按钮
    /* navigation: {
