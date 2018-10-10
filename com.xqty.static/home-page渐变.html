@@ -11,14 +11,37 @@
             margin: 0px;
             padding: 0px;
         }
+        #boxscroll::-webkit-scrollbar
+        {
+            width: 16px;
+            height: 16px;
+            background-color: #F5F5F5;
+        }
 
-        body{
+        /*定义滚动条轨道 内阴影+圆角*/
+        /*#boxscroll::-webkit-scrollbar-track
+        {
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+            border-radius: 20px;
+            background-color: transparent;
+        }*/
+
+        /*定义滑块 内阴影+圆角*/
+        #boxscroll::-webkit-scrollbar-thumb
+        {
+            border-radius: 10%;
+            -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,.3);
+            background-color: darkmagenta;
+        }
+
+        body {
             overflow: hidden;
         }
+
         a {
             text-decoration: none;
-            color: black;
-            font-size: 20px;
+            color: white;
+            font-size: 18px;
         }
 
         .swiper-container {
@@ -30,7 +53,7 @@
             width: 100%;
             height: 100%;
             border: 1px solid red;
-            background-color: gainsboro;
+            background-color: white;
             text-align: center;
         }
 
@@ -41,31 +64,22 @@
             background-color: grey;
             height: 630px;
         }
-        .nav-div{
-            z-index: 9999;position: fixed;border: 1px solid red;
-            height: 60px;width: 100%;background-color: transparent;
-            transition: all 1s;text-align: right;opacity:.9;
+
+        .nav-div {
+            z-index: 9999;
+            position: fixed;
+            height: 60px;
+            width: 100%;
+            transition: all 1s;
+            text-align: right;
         }
-        .nav-div:hover{
-            background-color: darkgrey;
+
+        .nav-div > .nav-div2 > .nav-div4 {
+            margin-right: 159px;
+            margin-top: 50px;
         }
-        .nav-div>.nav-div2>.nav-div3{
-            position: absolute;
-            border: 1px solid red;
-            width: 30%;
-            height: 100%;
-            margin-left: -90px;
-            margin-top: -10px;
-        }
-        .nav-div>.nav-div2>.nav-div3>img{
-            height: 100%;
-            width: 20%;
-        }
-        .nav-div>.nav-div2>.nav-div4{
-            margin-right: 50px;
-            margin-top: 10px;
-        }
-        #swiper-slide{
+
+        #swiper-slide {
             position: absolute;
             margin-top: 40%;
             margin-left: 20%;
@@ -74,7 +88,8 @@
             height: 400px;
             background-color: #cccccc;
         }
-        #swiper-slide2{
+
+        #swiper-slide2 {
             position: absolute;
             top: 20%;
             left: -20%;
@@ -82,18 +97,25 @@
             width: 300px;
             height: 400px;
         }
+
+        #boxscroll{
+            height: 401px;
+            width: 300px;
+            overflow: auto;
+            margin-left: 10%;
+            margin-top: 20%;
+            position: absolute;
+        }
+
     </style>
     <link rel="stylesheet" href="../com.xqty.config/swiper-config/css/swiper-4.3.5.min.css">
 </head>
 <body>
 <div class="nav-div" style="min-width: 1366px;">
     <div class="nav-div2">
-            <div class="nav-div3">
-                <img src="../com.xqty.config/img-config/1538028207(1).jpg"/>
-            </div>
 
         <div class="nav-div4">
-            <a id="nav-a1" href="#div1" style="color: yellow">
+            <a id="nav-a1" href="#div1" style="color: yellow;">
                 关于我们
             </a>
 
@@ -116,87 +138,205 @@
     </div>
 </div>
 
-                <div class="swiper-container" style="min-width: 1366px;">
-                    <div class="swiper-wrapper" style="height: 100%">
-                        <div class="swiper-slide swiper-no-swiping"  style="height: 765px;overflow: scroll" id="div1" data-hash="div1">
-                        <!--长图-->
-                            <div style="border:1px solid maroon;width:100%;height:100%;">
-                                <div style="border: 1px solid navy;width: 100%;height: 100%;">
-                                    <img src="../com.xqty.config/img-config/1.jpg" style="width: 1200px;height: 765px;margin-left: 15px">\
-                                </div>
-                            </div>
-                            <div style="border: 1px solid navy;width: 100%;height: 100%;">
-                                <div style="border: 1px solid navy;width: 100%;height: 100%;">
-                                    <img src="../com.xqty.config/img-config/1.jpg" style="width: 1200px;height: 765px">\
-                                </div>
-                            </div>
-                            <div style="border: 1px solid navy;width: 100%;height: 100%;">
-                                <div style="border: 1px solid navy;width: 100%;height: 100%;">
-                                    <img src="../com.xqty.config/img-config/2.jpg" style="width: 1200px;height: 765px">\
-                                </div>
-                            </div>
-                            <div style="border: 1px solid navy;width: 100%;height: 100%;">
-                                <div style="border: 1px solid navy;width: 100%;height: 100%;">
-                                    <img src="../com.xqty.config/img-config/1.jpg" style="width: 1200px;height: 765px">\
-                                </div>
-                            </div>
-                            <div style="border: 1px solid navy;width: 100%;height: 100%;">
-                                <div style="border: 1px solid navy;width: 100%;height: 100%;">
-                                    <img src="../com.xqty.config/img-config/1.jpg" style="width: 1200px;height: 765px">\
-                                </div>
-                            </div>
-                        </div>
+<div class="swiper-container" style="min-width: 1366px;">
+    <div class="swiper-wrapper" style="height: 100%">
+        <div class="swiper-slide swiper-no-swiping" style="height: 715px;overflow: scroll;" id="div1" data-hash="div1">
+            <!--长图-->
+            <div style="border:1px solid maroon;width:100%;height:100%;">
 
-                        <!--swiper锚点跳转配置-->
-                        <div class="swiper-slide"  style="height: 659px" id="div2" data-hash="div2">
-                            <div style="overflow: hidden">
-                                <div  id="swiper-slide">
-                                    健康监测
-                                </div>
-
-                                <div id="swiper-slide2">
-                                    健康监测2
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide" style="height: 659px" id="div3" data-hash="div3">
-                            <div style="background-color: red" >
-                                <div  class="swiper-slide2" style="background-color: #007aff">
-                                    体育科技
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide" style="height: 659px" id="div4" data-hash="div4">
-                            <div style="background-color: tan">
-                                <div  class="swiper-slide2" style="background-color: indigo">
-                                    联系我们
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide" style="height: 659px" id="div5" data-hash="div5">
-                            <div style="background-color: powderblue">
-                                <div  class="swiper-slide2" style="background-color: brown">
-                                    后台检测
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 如果需要分页器 -->
-                    <div class="swiper-pagination" style="margin-right: 10%"></div>
-                    <!-- 如果需要导航按钮
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>-->
-
-                    <!--&lt;!&ndash; 如果需要滚动条 &ndash;&gt;
-                    <div class="swiper-scrollbar"></div>-->
+                <div style="border: 1px solid navy;width: 100%;height: 100%;">
+                    <img src="../com.xqty.config/img-config/1.jpg"
+                         style="width: 1200px;height: 765px;margin-left: 15px">
                 </div>
-    </body>
+
+                <div style="width: 275px;height: 415px;border: 2px solid red;position: absolute;margin-top: -167px;margin-left: 83px">
+                    <img src="../com.xqty.config/img-config/4.jpg" height="420" width="274"/>
+                    <img src="../com.xqty.config/img-config/5.png" height="305" width="615"
+                         style="position: absolute;margin-top: -563px;margin-left: 135px"/>
+                </div>
+
+            </div>
+            <div style="border: 1px solid navy;width: 100%;height: 100%;">
+                <div style="border: 1px solid navy;width: 100%;height: 100%;">
+                    <img src="../com.xqty.config/img-config/1.jpg"
+                         style="width: 1200px;height: 765px;margin-left: 15px">
+                </div>
+            </div>
+            <div style="border: 1px solid navy;width: 100%;height: 100%;">
+                <div style="border: 1px solid navy;width: 100%;height: 100%;">
+                    <img src="../com.xqty.config/img-config/2.jpg"
+                         style="width: 1200px;height: 750px;margin-left: 15px">
+                </div>
+            </div>
+            <!--滚动轴开始-->
+            <div style="border: 1px solid transparent;width: 100%;height: 100%;">
+                <div style="border: 1px solid navy;width: 100%;height: 100%;">
+
+                    <!--滚动轴中间线-->
+                    <div style="margin-left: 24.2%;margin-top: 20%;border-right: 2px solid darkmagenta;position: absolute;width: 100px;height: 395px;z-index: 9999">
+
+                    </div>
+                    <div id="boxscroll">
+                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
+                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
+
+                            </div>
+                        </div>
+                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
+                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
+                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
+                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
+                            </div>
+                        </div>
+                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
+                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
+                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
+                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
+                            </div>
+                        </div>
+                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
+                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
+                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
+                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
+                            </div>
+                        </div>
+                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
+                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
+                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
+                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
+                            </div>
+                        </div>
+                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
+                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
+                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
+                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
+                            </div>
+                        </div>
+                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
+                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
+                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
+                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
+                            </div>
+                        </div>
+                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
+                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
+                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
+                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
+                            </div>
+                        </div>
+                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
+                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
+                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
+                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
+                            </div>
+                        </div>
+                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
+                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
+                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
+                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
+                            </div>
+                        </div>
+                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
+                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
+                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
+                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
+                            </div>
+                        </div>
+                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
+                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
+                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
+                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
+                            </div>
+                        </div>
+                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
+                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
+                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
+                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
+                            </div>
+                        </div>
+                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
+                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
+                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
+                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
+                            </div>
+                        </div>
+                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
+                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
+                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
+                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
+                            </div>
+                        </div>
+                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
+                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
+                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
+                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!--滚动轴结束-->
+
+            <div style="border: 1px solid navy;width: 100%;height: 100%;">
+                <div style="border: 1px solid navy;width: 100%;height: 100%;">
+                    <img src="../com.xqty.config/img-config/1.jpg"
+                         style="width: 1200px;height: 765px;margin-left: 15px">
+                </div>
+            </div>
+        </div>
+
+        <!--swiper锚点跳转配置-->
+        <div class="swiper-slide" style="height: 659px" id="div2" data-hash="div2">
+            <div style="overflow: hidden">
+                <div id="swiper-slide">
+                    健康监测
+                </div>
+
+                <div id="swiper-slide2">
+                    健康监测2
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide" style="height: 659px" id="div3" data-hash="div3">
+            <div style="background-color: red">
+                <div class="swiper-slide2" style="background-color: #007aff">
+                    体育科技
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide" style="height: 659px" id="div4" data-hash="div4">
+            <div style="background-color: tan">
+                <div class="swiper-slide2" style="background-color: indigo">
+                    联系我们
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide" style="height: 659px" id="div5" data-hash="div5">
+            <div style="background-color: powderblue">
+                <div class="swiper-slide2" style="background-color: brown">
+                    后台检测
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination" style="margin-right: 10%"></div>
+    <!-- 如果需要导航按钮
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>-->
+
+    <!--&lt;!&ndash; 如果需要滚动条 &ndash;&gt;
+    <div class="swiper-scrollbar"></div>-->
+</div>
+</body>
 <script src="../com.xqty.config/swiper-config/js/swiper-4.3.5.min.js"></script>
 <script src="../com.xqty.config/swiper-config/swiper.js"></script>
 <script src="../com.xqty.config/node_modules/jquery/dist/jquery.js"></script>
 <script>
+
     //每次刷新页面指定跳转路径
-    window.onload=function(){
+    window.onload = function () {
         location.href = "#div1";
     }
 
@@ -208,13 +348,13 @@
     //a标签点击高亮效果
     $('#nav-a1').click(function () {
         nav1.style = 'color:yellow;';
-        nav2.style='color: black;';
+        nav2.style = 'color: black;';
     });
     $('#nav-a2').click(function () {
         nav2.style = 'color:yellow;';
-        pro1.style='transform: translateY(-100%);transition:all 1.5s;';
-        pro2.style='transform: translateX(100%);transition:all 1.9s;';
-        nav1.style='color: black;';
+        pro1.style = 'transform: translateY(-100%);transition:all 1.5s;';
+        pro2.style = 'transform: translateX(100%);transition:all 1.9s;';
+        nav1.style = 'color: black;';
     });
 
     //禁止用户对页面放大缩小
@@ -223,7 +363,7 @@
         $('body').css('zoom', 'reset');
         $(document).keydown(function (event) {
             //event.metaKey mac的command键
-            if ((event.ctrlKey === true || event.metaKey === true)&& (event.which === 61 || event.which === 107 || event.which === 173 || event.which === 109 || event.which === 187  || event.which === 189)){
+            if ((event.ctrlKey === true || event.metaKey === true) && (event.which === 61 || event.which === 107 || event.which === 173 || event.which === 109 || event.which === 187 || event.which === 189)) {
                 event.preventDefault();
             }
         });
