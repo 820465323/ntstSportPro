@@ -11,27 +11,28 @@
             margin: 0px;
             padding: 0px;
         }
-        #boxscroll::-webkit-scrollbar
-        {
+
+        #boxscroll::-webkit-scrollbar {
             width: 16px;
             height: 16px;
             background-color: #F5F5F5;
+            z-index: 9999999;
         }
 
         /*定义滚动条轨道 内阴影+圆角*/
-        /*#boxscroll::-webkit-scrollbar-track
+        #boxscroll::-webkit-scrollbar-track
         {
             -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
             border-radius: 20px;
-            background-color: transparent;
-        }*/
+            display: none;
+        }
 
         /*定义滑块 内阴影+圆角*/
-        #boxscroll::-webkit-scrollbar-thumb
-        {
+        #boxscroll::-webkit-scrollbar-thumb {
             border-radius: 10%;
-            -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,.3);
+            -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, .3);
             background-color: darkmagenta;
+            z-index: 9999999;
         }
 
         body {
@@ -98,13 +99,14 @@
             height: 400px;
         }
 
-        #boxscroll{
+        #boxscroll {
             height: 401px;
             width: 300px;
             overflow: auto;
             margin-left: 10%;
             margin-top: 20%;
             position: absolute;
+            z-index: 9999;
         }
 
     </style>
@@ -138,156 +140,199 @@
     </div>
 </div>
 
-<div class="swiper-container" style="min-width: 1366px;">
-    <div class="swiper-wrapper" style="height: 715px">
-        <div class="swiper-slide swiper-no-swiping" style="height: 715px;overflow: scroll;" id="div1" data-hash="div1">
+<div class="swiper-container" style="min-width: 1200px;">
+    <div class="swiper-wrapper" style="height: 735px">
+        <div class="swiper-slide swiper-no-swiping" style="height: 735px;overflow: scroll;" id="div1" data-hash="div1">
             <!--长图首页第一板块-->
-            <div style="border:1px solid maroon;width:100%;height:715px;">
-                <div style="border: 1px solid navy;width: 100%;height: 715px;">
+            <div style="border:1px solid maroon;width:100%;height:735px;">
+                <div style="border: 1px solid navy;width: 100%;height: 735px;">
                     <img src="../com.xqty.config/img-config/1.jpg"
-                         style="width: 1200px;height: 715px;margin-left: 15px">
+                         style="width: 1200px;height: 750px;margin-left: 15px">
                 </div>
 
-                <div style="width: 275px;height: 415px;border: 2px solid red;position: absolute;margin-top: -167px;margin-left: 83px">
-                    <img src="../com.xqty.config/img-config/4.jpg" height="420" width="274"/>
-                    <img src="../com.xqty.config/img-config/5.png" height="305" width="615"
-                         style="position: absolute;margin-top: -563px;margin-left: 135px"/>
-                    <img src="../com.xqty.config/img-config/6.jpg" height="406" width="275"
-                         style="position: absolute;margin-left: 783px;z-index: 99999;margin-top: -442px;"/>
+                <div style="width: 275px;height: 415px;border: 2px solid red;position: absolute;margin-top: -172px;margin-left: 83px">
+                    <img src="../com.xqty.config/img-config/4.png" height="420" width="294"/>
+                    <img src="../com.xqty.config/img-config/5.png" height="340" width="655"
+                         style="position: absolute;margin-top: -580px;margin-left: 131px"/>
+                    <img src="../com.xqty.config/img-config/6.png" height="406" width="300"
+                         style="position: absolute;margin-left: 760px;z-index: 99999;margin-top: -412px;"/>
                 </div>
             </div>
 
             <!--第二板块-->
-            <div style="border: 1px solid mediumseagreen;width: 1196px;height: 100%;margin-left: 6.3%;">
-                <div style="border: 1px solid peru;width: 1196px;height: 100%;">
+            <div style="border: 1px solid mediumseagreen;width: 1196px;height: 710px;margin-left: 6.2%;">
+                <div style="border: 1px solid peru;width: 1196px;height: 710px;">
                     <div style="border:1px solid black;width: 100%;height: 70%;">
                         <div style="border: 1px solid red;width: 275px;height: 100%;display: inline-block;">
-                            <img src="../com.xqty.config/img-config/7.png" height="94" width="102" style="margin-top: 307px;margin-left: -45px;position: absolute"/>
+                            <img src="../com.xqty.config/img-config/7.png" height="94" width="102"
+                                 style="margin-top: 247px;margin-left: -45px;position: absolute"/>
                         </div>
-                        <div style="border: 1px solid red;width: 615px;height: 100%;display: inline-block;"></div>
-                        <div style="border: 1px solid red;width: 275px;height: 100%;display: inline-block"></div>
+                        <div style="border: 1px solid red;width: 615px;height: 100%;display: inline-block;">
+                            <img src="../com.xqty.config/img-config/8.jpg" height="455" width="425"
+                                 style="margin-right: 50px;margin-top: 96px"/>
+                        </div>
+                        <div style="border: 1px solid red;width: 275px;height: 100%;display: inline-block;margin-top: 20px">
+                            <img src="../com.xqty.config/img-config/9.png" height="162" width="141"
+                                 style="position: absolute;margin-top: 268px;margin-left: -54px"/>
+                        </div>
                     </div>
                     <div style="border:1px solid red;width: 100%;height: 29.5%;">
-
+                        <div style="width: 50%;height: 200px;position: absolute;border: 3px solid forestgreen;text-align: left;margin-left: 110px;margin-top: 10px">
+                            <div style="margin-top: 35px">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;新清泰克是前沿的体育科技公司，创立于清华科技园，致力于体育与
+                                <br>
+                                科技的融合，新清认为科技是体育产业发展的源动力，将前沿科技应用于体 <br>
+                                育产业，将竞技领域的技术民用化，既科技助力竞技体育，实现更高、更快、 <br>
+                                更强，也服务于大众健康，帮助更多普通人身心获益，实现健康中国的使命。<br>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
+            <!--第三个板块-->
             <div style="border: 1px solid navy;width: 100%;height: 100%;">
                 <div style="border: 1px solid navy;width: 100%;height: 100%;">
                     <img src="../com.xqty.config/img-config/2.jpg"
                          style="width: 1200px;height: 750px;margin-left: 15px">
                 </div>
-            </div>
-            <!--滚动轴开始-->
-            <div style="border: 1px solid transparent;width: 100%;height: 100%;">
-                <div style="border: 1px solid navy;width: 100%;height: 100%;">
 
-                    <!--滚动轴中间线-->
-                    <div style="margin-left: 24.2%;margin-top: 20%;border-right: 2px solid darkmagenta;position: absolute;width: 100px;height: 395px;z-index: 9999">
-
+                <div style="border: 2px solid beige;width: 49%;height: 100%;position: absolute;margin-top: -55.5%">
+                    <div style="border: 2px solid red;width: 80%;height: 50%;position: absolute;margin-top: 365px;margin-left: 20%">
+                        <div style="border: 1px solid #FFD600;width: 100%;height: 50%">
+                            <p style="font-size: 70px;color: #FFD600;margin-left: -156px">健康检测</p>
+                            <p style="font-size: 40px;color: #FFD600;margin-left: -102px">Health inspection</p>
+                        </div>
                     </div>
-                    <div id="boxscroll">
-                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
-                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
+                </div>
+                <div style="border: 2px solid indianred;width: 46%;height: 100%;position: absolute;margin-top: -55.5%;margin-left: 49%">
+                    <div style="border: 2px solid red;width: 150px;height: 170px;position: absolute;margin-left: 237px;margin-top: 575px"></div>
+                    <div style="border: 2px solid powderblue;width: 150px;height: 170px;position: absolute;margin-left: 53px;margin-top: 269px"></div>
+                    <div style="border: 2px solid firebrick;width: 150px;height: 170px;position: absolute;margin-left: 284px;margin-top: -4px"></div>
 
-                            </div>
-                        </div>
-                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
-                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
-                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
-                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
-                            </div>
-                        </div>
-                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
-                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
-                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
-                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
-                            </div>
-                        </div>
-                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
-                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
-                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
-                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
-                            </div>
-                        </div>
-                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
-                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
-                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
-                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
-                            </div>
-                        </div>
-                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
-                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
-                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
-                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
-                            </div>
-                        </div>
-                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
-                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
-                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
-                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
-                            </div>
-                        </div>
-                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
-                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
-                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
-                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
-                            </div>
-                        </div>
-                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
-                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
-                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
-                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
-                            </div>
-                        </div>
-                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
-                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
-                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
-                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
-                            </div>
-                        </div>
-                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
-                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
-                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
-                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
-                            </div>
-                        </div>
-                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
-                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
-                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
-                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
-                            </div>
-                        </div>
-                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
-                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
-                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
-                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
-                            </div>
-                        </div>
-                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
-                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
-                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
-                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
-                            </div>
-                        </div>
-                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
-                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
-                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
-                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
-                            </div>
-                        </div>
-                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
-                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
-                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
-                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
-                            </div>
-                        </div>
-
+                    <div style="border: 3px solid red;width: 70%;height: 50%;margin-top: 200px;margin-left: 100px;">
+                        <p style="color: white;;font-size: 20px">营造一流的线下健康服务</p>
+                        <p style="line-height:60px;color: white;font-size: 20px">汇聚国际先进的体育科技服务</p>
+                        <p style="line-height:60px;color: white;font-size: 20px">打造符合国人特点的健康服务产品</p>
+                        <p style="line-height:60px;color: white;font-size: 20px">设计科学的健康管理标准和体系</p>
+                        <p style="line-height:60px;color: white;font-size: 20px">塑造全新的健康管理理念</p>
+                        <p style="line-height:60px;color: white;font-size: 20px">培养全面的健康管理人才</p>
+                        <p style="line-height:60px;color: white;font-size: 20px">建设基于AI大数据健康管理平台</p>
                     </div>
                 </div>
             </div>
-            <!--滚动轴结束-->
+
+            <div style="border: 5px solid red;width: 100%;height: 100%;">
+
+                    <div style="border: 1px solid red;width: 500px;height: 200px;position: absolute;margin-left: 96px">
+
+                    </div>
+
+                <!--滚动轴开始-->
+                   <!-- &lt;!&ndash;滚动轴中间线&ndash;&gt;
+                    <div id="boxscroll-0" style="margin-left: 24.2%;margin-top: 20%;border-right: 10px solid darkmagenta;position: absolute;width: 100px;height: 395px;z-index: 1">
+                    </div>-->
+                    <div id="boxscroll">
+                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
+                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
+                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
+                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
+                            </div>
+                        </div>
+                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
+                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
+                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
+                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
+                            </div>
+                        </div>
+                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
+                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
+                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
+                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
+                            </div>
+                        </div>
+                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
+                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
+                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
+                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
+                            </div>
+                        </div>
+                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
+                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
+                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
+                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
+                            </div>
+                        </div>
+                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
+                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
+                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
+                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
+                            </div>
+                        </div>
+                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
+                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
+                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
+                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
+                            </div>
+                        </div>
+                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
+                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
+                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
+                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
+                            </div>
+                        </div>
+                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
+                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
+                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
+                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
+                            </div>
+                        </div>
+                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
+                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
+                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
+                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
+                            </div>
+                        </div>
+                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
+                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
+                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
+                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
+                            </div>
+                        </div>
+                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
+                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
+                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
+                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
+                            </div>
+                        </div>
+                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
+                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
+                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
+                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
+                            </div>
+                        </div>
+                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
+                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
+                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
+                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
+                            </div>
+                        </div>
+                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
+                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
+                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
+                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--滚动轴结束-->
+
+                <div style="border: 1px solid red;width: 44%;height: 80%;position: absolute;margin-left: 50%;overflow: hidden">
+                    <div style="position: absolute;width: 200px;height: 200px;border: 1px solid goldenrod;margin-left: 70%;background-color: #cccccc"></div>
+                    <div style="position: absolute;width: 300px;height: 200px;border: 1px solid black;margin-left: 23%;z-index: 9999;background-color: black"></div>
+                </div>
+            </div>
+
 
             <div style="border: 1px solid navy;width: 100%;height: 100%;">
                 <div style="border: 1px solid navy;width: 100%;height: 100%;">
