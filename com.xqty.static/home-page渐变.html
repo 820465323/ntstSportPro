@@ -20,9 +20,8 @@
         }
 
         /*定义滚动条轨道 内阴影+圆角*/
-        #boxscroll::-webkit-scrollbar-track
-        {
-            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        #boxscroll::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
             border-radius: 20px;
             display: none;
         }
@@ -100,15 +99,20 @@
         }
 
         #boxscroll {
-            height: 401px;
-            width: 300px;
+            height: 350px;
+            width: 312px;
             overflow: auto;
-            margin-left: 10%;
+            margin-left: 12.7%;
             margin-top: 20%;
             position: absolute;
             z-index: 9999;
         }
-
+        .boxscroll-after:after{
+            content: "";
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
     </style>
     <link rel="stylesheet" href="../com.xqty.config/swiper-config/css/swiper-4.3.5.min.css">
 </head>
@@ -152,8 +156,8 @@
 
                 <div style="width: 275px;height: 415px;border: 2px solid red;position: absolute;margin-top: -172px;margin-left: 83px">
                     <img src="../com.xqty.config/img-config/4.png" height="420" width="294"/>
-                    <img src="../com.xqty.config/img-config/5.png" height="340" width="655"
-                         style="position: absolute;margin-top: -580px;margin-left: 131px"/>
+                    <img id="img-center" src="../com.xqty.config/img-config/5.png" height="340" width="655"
+                         style="position: absolute;margin-top: -300px;margin-left: 131px;opacity: 0.1"/>
                     <img src="../com.xqty.config/img-config/6.png" height="406" width="300"
                          style="position: absolute;margin-left: 760px;z-index: 99999;margin-top: -412px;"/>
                 </div>
@@ -222,120 +226,99 @@
                 </div>
             </div>
 
-            <div style="border: 5px solid red;width: 100%;height: 100%;">
+            <div style="border: 5px solid red;width: 100%;height: 105%;">
 
-                    <div style="border: 1px solid red;width: 500px;height: 200px;position: absolute;margin-left: 96px">
-
-                    </div>
+                <!--滚动轴前方字体-->
+                <div style="border: 1px solid red;width: 500px;height: 200px;position: absolute;margin-left: 170px;">
+                    <div style="font-family: 'Arial Black';font-size: 40px;color: #512979;float: left;margin-top: 45px">THU</div>
+                    <div style="line-height:260px;font-size: 40px;color: #9e24c5;position: absolute">体育科技评论</div>
+                </div>
 
                 <!--滚动轴开始-->
-                   <!-- &lt;!&ndash;滚动轴中间线&ndash;&gt;
-                    <div id="boxscroll-0" style="margin-left: 24.2%;margin-top: 20%;border-right: 10px solid darkmagenta;position: absolute;width: 100px;height: 395px;z-index: 1">
-                    </div>-->
-                    <div id="boxscroll">
-                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
-                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
-                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
-                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
+                <!-- &lt;!&ndash;滚动轴中间线&ndash;&gt;
+                 <div id="boxscroll-0" style="margin-left: 24.2%;margin-top: 20%;border-right: 10px solid darkmagenta;position: absolute;width: 100px;height: 395px;z-index: 1">
+                 </div>-->
+                <div id="boxscroll">
+                    <div style="width: 99%;height: 95px;">
+                        <div class="boxscroll-after" style="border: 1px solid red;width: 99%;height: 62%">
+                            <div style="border: 1px solid brown;width: 60px;height: 60px;display: inline-block;vertical-align: middle">
+                                <img src="../com.xqty.config/img-config/1538028207(1).jpg" style="width: 100%;height: 100%"/>
+                            </div>
+                            <div style="border: 1px solid goldenrod;width: 215px;height: 58.5%;display: inline-block;vertical-align: middle">
+                                <p style="font-size: 14px">2018 平昌冬奥会的科技力量</p>
                             </div>
                         </div>
-                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
-                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
-                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
-                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
-                            </div>
-                        </div>
-                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
-                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
-                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
-                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
-                            </div>
-                        </div>
-                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
-                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
-                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
-                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
-                            </div>
-                        </div>
-                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
-                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
-                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
-                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
-                            </div>
-                        </div>
-                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
-                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
-                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
-                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
-                            </div>
-                        </div>
-                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
-                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
-                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
-                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
-                            </div>
-                        </div>
-                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
-                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
-                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
-                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
-                            </div>
-                        </div>
-                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
-                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
-                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
-                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
-                            </div>
-                        </div>
-                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
-                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
-                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
-                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
-                            </div>
-                        </div>
-                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
-                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
-                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
-                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
-                            </div>
-                        </div>
-                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
-                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
-                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
-                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
-                            </div>
-                        </div>
-                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
-                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
-                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
-                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
-                            </div>
-                        </div>
-                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
-                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
-                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
-                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
-                            </div>
-                        </div>
-                        <div style="border-bottom: 1px solid gray;width: 99%;height: 100px;">
-                            <div style="border: 1px solid rosybrown;width: 96%;height: 90%">
-                                <div style="border: 1px solid brown;width: 30%;height: 50%;display: inline-block"></div>
-                                <div style="border: 1px solid goldenrod;width: 60%;height: 47.5%;display: inline-block"></div>
-                            </div>
-                        </div>
-
                     </div>
-                    <!--滚动轴结束-->
+                    <div style="width: 99%;height: 95px;">
+                        <div class="boxscroll-after" style="border: 1px solid red;width: 99%;height: 62%">
+                            <div style="border: 1px solid brown;width: 60px;height: 60px;display: inline-block;vertical-align: middle">
+                                <img src="../com.xqty.config/img-config/1538028207(1).jpg" style="width: 100%;height: 100%"/>
+                            </div>
+                            <div style="border: 1px solid goldenrod;width: 215px;height: 58.5%;display: inline-block;vertical-align: middle">
+                                <p style="font-size: 14px">2018 平昌冬奥会的科技力量</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="width: 99%;height: 95px;">
+                        <div class="boxscroll-after" style="border: 1px solid red;width: 99%;height: 62%">
+                            <div style="border: 1px solid brown;width: 60px;height: 60px;display: inline-block;vertical-align: middle">
+                                <img src="../com.xqty.config/img-config/1538028207(1).jpg" style="width: 100%;height: 100%"/>
+                            </div>
+                            <div style="border: 1px solid goldenrod;width: 215px;height: 58.5%;display: inline-block;vertical-align: middle">
+                                <p style="font-size: 14px">2018 平昌冬奥会的科技力量</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="width: 99%;height: 95px;">
+                        <div class="boxscroll-after" style="border: 1px solid red;width: 99%;height: 62%">
+                            <div style="border: 1px solid brown;width: 60px;height: 60px;display: inline-block;vertical-align: middle">
+                                <img src="../com.xqty.config/img-config/1538028207(1).jpg" style="width: 100%;height: 100%"/>
+                            </div>
+                            <div style="border: 1px solid goldenrod;width: 215px;height: 58.5%;display: inline-block;vertical-align: middle">
+                                <p style="font-size: 14px">2018 平昌冬奥会的科技力量</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="width: 99%;height: 95px;">
+                        <div class="boxscroll-after" style="border: 1px solid red;width: 99%;height: 62%">
+                            <div style="border: 1px solid brown;width: 60px;height: 60px;display: inline-block;vertical-align: middle">
+                                <img src="../com.xqty.config/img-config/1538028207(1).jpg" style="width: 100%;height: 100%"/>
+                            </div>
+                            <div style="border: 1px solid goldenrod;width: 215px;height: 58.5%;display: inline-block;vertical-align: middle">
+                                <p style="font-size: 14px">2018 平昌冬奥会的科技力量</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top: 48.5%;position: absolute;margin-left: -500px;font-size: 20px;color: #512979;">
+                    Sports Technology Review
+                </div>
+                <!--滚动轴结束-->
 
-                <div style="border: 1px solid red;width: 44%;height: 80%;position: absolute;margin-left: 50%;overflow: hidden">
-                    <div style="position: absolute;width: 200px;height: 200px;border: 1px solid goldenrod;margin-left: 70%;background-color: #cccccc"></div>
-                    <div style="position: absolute;width: 300px;height: 200px;border: 1px solid black;margin-left: 23%;z-index: 9999;background-color: black"></div>
+                <div style="border: 1px solid red;width: 520px;height: 585px;position: absolute;margin-left: 56%;overflow: hidden">
                 </div>
             </div>
 
 
             <div style="border: 1px solid navy;width: 100%;height: 100%;">
                 <div style="border: 1px solid navy;width: 100%;height: 100%;">
+                    <div style="border: 5px solid red;width: 100%;height: 74%;position: absolute">
+                        <div style="border: 1px solid greenyellow;width: 100%;height: 60%;">
+                            <div style="border: 1px solid red;width: 200px;height: 200px;margin-left: 43%;margin-top: 5%">
+
+                            </div>
+                        </div>
+                        <div style="border: 1px solid firebrick;width: 100%;height: 40%">
+                            <div style="border: 1px solid #FFD600;width: 800px;height: 100%;margin-left: 10%;margin-left: 275px">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div style="border: 5px solid greenyellow;width: 100%;height: 20%;position: absolute;margin-top: 41.5%;">
+                        <div style="border: 1px solid #FFD600;width: 800px;height: 100%;margin-left: 275px">
+                            aaaaaaaaaaaaaaaaaaaa
+                        </div>
+                    </div>
                     <img src="../com.xqty.config/img-config/1.jpg"
                          style="width: 1200px;height: 765px;margin-left: 15px">
                 </div>
@@ -390,6 +373,10 @@
 <script src="../com.xqty.config/swiper-config/swiper.js"></script>
 <script src="../com.xqty.config/node_modules/jquery/dist/jquery.js"></script>
 <script>
+
+    //三角图动态渐出
+    var imgcenter = document.querySelector('#img-center');
+    imgcenter.style='position: absolute;margin-top: -300px;margin-left: 131px;transform: translateY(-279px);transition:all 1.7s;opacity:1';
 
     //每次刷新页面指定跳转路径
     window.onload = function () {
