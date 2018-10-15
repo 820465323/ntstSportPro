@@ -32,8 +32,11 @@
             -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, .3);
             background-color: darkmagenta;
             z-index: 9999999;
+            display: none;
         }
-
+        #boxscroll-0:hover>#boxscroll::-webkit-scrollbar-thumb{
+            display: block;
+        }
         body {
             overflow: hidden;
         }
@@ -47,6 +50,7 @@
         .swiper-container {
             width: 100%;
             height: 765px;
+            min-width: 1200px;
         }
 
         .swiper-slide > div {
@@ -55,14 +59,6 @@
             border: 1px solid transparent;
             background-color: white;
             text-align: center;
-        }
-
-        .swiper-slide2 {
-            border: 1px solid transparent;
-            width: 80%;
-            margin-left: 10%;
-            background-color: grey;
-            height: 630px;
         }
 
         .nav-div {
@@ -87,6 +83,8 @@
             margin-top: 20%;
             position: absolute;
             z-index: 9999;
+            text-align: left;
+            transition: all 2s;
         }
 
         .boxscroll-after:after {
@@ -94,6 +92,27 @@
             display: inline-block;
             height: 100%;
             vertical-align: middle;
+        }
+        .long-img{
+            border:1px solid transparent;width:100%;height:735px;overflow: hidden
+        }
+        .long-img2{
+            border: 1px solid transparent;width: 100%;height: 735px
+        }
+        .long-img3{
+            width: 1200px;height: 750px;
+        }
+        .long-img4{
+            width: 275px;height: 415px;border: 1px solid transparent;position: absolute;margin-top: -172px;margin-left: 6.1%
+        }
+        .long-img5{
+            height: 420px;width: 294px;
+        }
+        .long-img6{
+            position: absolute;margin-top: -300px;margin-left: 139px;opacity: 0.1;height: 340px;width: 655px;
+        }
+        .long-img7{
+            position: absolute;margin-left: 276.9%;z-index: 99999;margin-top: -412px;height: 406px;width: 300px;
         }
     </style>
     <link rel="stylesheet" href="../com.xqty.config/swiper-config/css/swiper-4.3.5.min.css">
@@ -126,22 +145,19 @@
     </div>
 </div>
 
-<div class="swiper-container" style="min-width: 1200px;">
+<div class="swiper-container">
     <div class="swiper-wrapper" style="height: 735px">
         <div class="swiper-slide" style="height: 659px" id="div1" data-hash="div1">
             <!--长图首页第一板块-->
-            <div style="border:1px solid transparent;width:100%;height:735px;overflow: hidden">
-                <div style="border: 1px solid transparent;width: 100%;height: 735px;">
-                    <img src="../com.xqty.config/img-config/1.jpg"
-                         style="width: 1200px;height: 750px;">
+            <div class="long-img">
+                <div class="long-img2" >
+                    <img class="long-img3" src="../com.xqty.config/img-config/1.jpg">
                 </div>
 
-                <div style="width: 275px;height: 415px;border: 1px solid transparent;position: absolute;margin-top: -172px;margin-left: 6.1%">
-                    <img src="../com.xqty.config/img-config/4.png" height="420" width="294"/>
-                    <img id="img-center" src="../com.xqty.config/img-config/5.png" height="340" width="655"
-                         style="position: absolute;margin-top: -300px;margin-left: 139px;opacity: 0.1"/>
-                    <img src="../com.xqty.config/img-config/6.png" height="406" width="300"
-                         style="position: absolute;margin-left: 276.9%;z-index: 99999;margin-top: -412px;"/>
+                <div class="long-img4">
+                    <img class="long-img5" src="../com.xqty.config/img-config/4.png" />
+                    <img class="long-img6" id="img-center" src="../com.xqty.config/img-config/5.png" />
+                    <img class="long-img7" src="../com.xqty.config/img-config/6.png"/>
                 </div>
             </div>
         </div>
@@ -228,8 +244,9 @@
                 <!-- &lt;!&ndash;滚动轴中间线&ndash;&gt;
                  <div id="boxscroll-0" style="margin-left: 24.2%;margin-top: 20%;border-right: 10px solid darkmagenta;position: absolute;width: 100px;height: 395px;z-index: 1">
                  </div>-->
+                <div id="boxscroll-0">
                 <div id="boxscroll">
-                    <div style="width: 99%;height: 95px;">
+                    <div class="boxscroll-one" style="width: 99%;height: 95px;">
                         <div class="boxscroll-after" style="border: 1px solid transparent;width: 99%;height: 62%">
                             <div style="border: 1px solid transparent;width: 60px;height: 60px;display: inline-block;vertical-align: middle">
 
@@ -239,7 +256,7 @@
                             </div>
                         </div>
                     </div>
-                    <div style="width: 99%;height: 95px;">
+                    <div class="boxscroll-one" style="width: 99%;height: 95px;">
                         <div class="boxscroll-after" style="border: 1px solid transparent;width: 99%;height: 62%">
                             <div style="border: 1px solid transparent;width: 60px;height: 60px;display: inline-block;vertical-align: middle">
                                 <img src="../com.xqty.config/img-config/15.jpg" style="width: 100%;height: 100%"/>
@@ -249,7 +266,7 @@
                             </div>
                         </div>
                     </div>
-                    <div style="width: 99%;height: 95px;">
+                    <div class="boxscroll-one" style="width: 99%;height: 95px;">
                         <div class="boxscroll-after" style="border: 1px solid transparent;width: 99%;height: 62%">
                             <div style="border: 1px solid transparent;width: 60px;height: 60px;display: inline-block;vertical-align: middle">
                                 <img src="../com.xqty.config/img-config/16.jpg" style="width: 100%;height: 100%"/></div>
@@ -258,7 +275,7 @@
                             </div>
                         </div>
                     </div>
-                    <div style="width: 99%;height: 95px;">
+                    <div class="boxscroll-one" style="width: 99%;height: 95px;">
                         <div class="boxscroll-after" style="border: 1px solid transparent;width: 99%;height: 62%">
                             <div style="border: 1px solid transparent;width: 60px;height: 60px;display: inline-block;vertical-align: middle">
                                 <img src="../com.xqty.config/img-config/17.jpg" style="width: 100%;height: 100%"/>
@@ -269,7 +286,7 @@
                             </div>
                         </div>
                     </div>
-                    <div style="width: 99%;height: 95px;">
+                    <div class="boxscroll-one" style="width: 99%;height: 95px;">
                         <div class="boxscroll-after" style="border: 1px solid transparent;width: 99%;height: 62%">
                             <div style="border: 1px solid transparent;width: 60px;height: 60px;display: inline-block;vertical-align: middle">
                                 <img src="../com.xqty.config/img-config/1538028207(1).jpg"
@@ -280,6 +297,7 @@
                             </div>
                         </div>
                     </div>
+                </div>
                 </div>
                 <div style="margin-top: 48.5%;position: absolute;margin-left: 170px;font-size: 20px;color: #512979;">
                     <p style="font-weight: bold">Sports Technology Review</p>
