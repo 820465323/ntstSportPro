@@ -4,20 +4,42 @@ var mySwiper = new Swiper('.swiper-container', {
         setTranslate: function (translate) {
             var nav1 = document.querySelector('#nav-a1');
             var nav2 = document.querySelector('#nav-a2');
-            var pro1 = document.querySelector('#swiper-slide');
-            var pro2 = document.querySelector('#swiper-slide2');
+            var nav3 = document.querySelector('#nav-a3');
+            var nav4 = document.querySelector('#nav-a4');
+            var nav5 = document.querySelector('#nav-a5');
             if (translate == '-765') {
-                nav2.style = 'color:yellow';
-                pro1.style = 'transform: translateY(-100%);transition:all 1.5s;display:block';
-                pro2.style = 'transform: translateX(100%);transition:all 1.9s;';
-                nav1.style = 'color:block';
-            } else if (translate == '0') {
-                nav2.style = 'color:block';
-                pro1.style = 'position: absolute;margin-top: 60%;border: 1px solid brown;width: 300px;height: 400px;';
-                pro2.style = 'position: absolute;top: 20%;left: -30%;border: 1px solid brown;width: 300px;height: 400px;';
                 nav1.style = 'color:yellow';
+                nav2.style = 'color:block';
+                nav3.style = 'color:block';
+                nav4.style = 'color:block';
+                nav5.style = 'color:block';
+            }else  if(translate=='-1530'){
+                nav2.style = 'color:yellow';
+                nav1.style = 'color:block';
+                nav3.style = 'color:block';
+                nav4.style = 'color:block';
+                nav5.style = 'color:block';
+            }else  if(translate=='-2295'){
+                nav3.style = 'color:yellow';
+                nav1.style = 'color:block';
+                nav2.style = 'color:block';
+                nav4.style = 'color:block';
+                nav5.style = 'color:block';
+            }else if(translate=='-3060'){
+                nav4.style = 'color:yellow';
+                nav1.style = 'color:block';
+                nav2.style = 'color:block';
+                nav3.style = 'color:block';
+                nav5.style = 'color:block';
             }
-            setTimeout(function () {
+            else if (translate == '0') {
+                nav1.style = 'color:block';
+                nav2.style = 'color:block';
+                nav3.style = 'color:block';
+                nav4.style = 'color:block';
+                nav5.style = 'color:block';
+            }
+            /*setTimeout(function () {
                 //获取当前模块的索引进行判断
                 if (mySwiper.activeIndex == 0) {
                     mySwiper.mousewheel.disable();
@@ -25,7 +47,7 @@ var mySwiper = new Swiper('.swiper-container', {
                     console.log('!=0!=0');
                     mySwiper.mousewheel.enable();
                 }
-            }, 1);
+            }, 1);*/
         }
     },
     //切换方式
