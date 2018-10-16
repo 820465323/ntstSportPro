@@ -1,0 +1,491 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#boxscroll::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+    background-color: #F5F5F5;
+    z-index: 9999999;
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+#boxscroll::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    display: none;
+}
+
+/*定义滑块 内阴影+圆角*/
+#boxscroll::-webkit-scrollbar-thumb {
+    border-radius: 10%;
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, .3);
+    background-color: darkmagenta;
+    z-index: 9999999;
+    display: none;
+}
+
+#boxscroll-0:hover > #boxscroll::-webkit-scrollbar-thumb {
+    display: block;
+}
+
+body {
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 765px;
+    min-width: 1200px;
+}
+
+.swiper-slide > div {
+    width: 100%;
+    height: 100%;
+    border: 1px solid transparent;
+    background-color: white;
+    text-align: center;
+}
+
+.nav-div {
+    z-index: 9999;
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    transition: all 1s;
+    text-align: right;
+    min-width: 1366px;
+}
+
+.nav-div > .nav-div2 > .nav-div4 {
+    margin-right: 159px;
+    margin-top: 50px;
+}
+
+#boxscroll {
+    height: 350px;
+    width: 312px;
+    overflow: auto;
+    margin-left: 12.7%;
+    margin-top: 20%;
+    position: absolute;
+    z-index: 9999;
+    text-align: left;
+    transition: all 2s;
+}
+
+.boxscroll-after {
+    border: 1px solid transparent;
+    width: 99%;
+    height: 62%
+}
+
+.boxscroll-after:after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.long-img {
+    border: 1px solid transparent;
+    width: 100%;
+    height: 735px;
+    overflow: hidden
+}
+
+.long-img2 {
+    border: 1px solid transparent;
+    width: 100%;
+    height: 735px;
+    overflow: hidden;
+}
+
+.long-img3 {
+    width: 1200px;
+    height: 750px;
+}
+
+.long-img4 {
+    width: 275px;
+    height: 415px;
+    border: 1px solid transparent;
+    position: absolute;
+    margin-top: -172px;
+    margin-left: 6.1%
+}
+
+.long-img5 {
+    height: 420px;
+    width: 294px;
+}
+
+.long-img6 {
+    position: absolute;
+    margin-top: -300px;
+    margin-left: 139px;
+    opacity: 0.1;
+    height: 340px;
+    width: 655px;
+}
+
+.long-img7 {
+    position: absolute;
+    margin-left: 276.9%;
+    z-index: 99999;
+    margin-top: -412px;
+    height: 406px;
+    width: 300px;
+}
+
+#div2 {
+    height: 735px;
+    overflow: scroll;
+}
+
+.about-us {
+    border: 1px solid transparent;
+    width: 1196px;
+    height: 710px;
+    margin-left: 6.2%;
+}
+
+.about-us1 {
+    border: 1px solid transparent;
+    width: 1196px;
+    height: 710px;
+}
+
+.about-us2 {
+    border: 1px solid transparent;
+    width: 100%;
+    height: 70%;
+}
+
+.about-us3 {
+    border: 1px solid transparent;
+    width: 275px;
+    height: 100%;
+    display: inline-block;
+}
+
+.about-us3 > img {
+    margin-top: 247px;
+    margin-left: -45px;
+    position: absolute;
+    height: 94px;
+    width: 102px;
+}
+
+.about-us4 {
+    border: 1px solid transparent;
+    width: 615px;
+    height: 100%;
+    display: inline-block;
+}
+
+.about-us4 > img {
+    margin-right: 50px;
+    margin-top: 96px;
+    height: 455px;
+    width: 425px;
+}
+
+.about-us5 {
+    border: 1px solid transparent;
+    width: 275px;
+    height: 100%;
+    display: inline-block;
+    margin-top: 20px
+}
+
+.about-us6 {
+    border: 1px solid transparent;
+    width: 100%;
+    height: 29.5%;
+}
+
+.about-us7 {
+    width: 50%;
+    height: 200px;
+    position: absolute;
+    border: 1px solid transparent;
+    text-align: left;
+    margin-left: 110px;
+    margin-top: 10px
+}
+
+.about-us8 {
+    margin-top: 35px;
+    font-size: 14px
+}
+
+.about-us8-p {
+    line-height: 40px;
+}
+
+.about-us-p2 {
+    line-height: 40px
+}
+
+.health-inspection {
+    overflow: hidden
+}
+
+.health-inspection2 {
+    border: 1px solid transparent;
+    width: 100%;
+    height: 100%;
+}
+
+.health-inspection3 {
+    border: 1px solid transparent;
+    width: 100%;
+    height: 100%;
+    position: relative
+}
+
+.health-inspection3 > img {
+    width: 1200px;
+    height: 750px;
+    margin-left: 15px;
+}
+
+.health-inspection4 {
+    border: 1px solid transparent;
+    width: 49%;
+    height: 100%;
+    position: absolute;
+    margin-top: -55.5%
+}
+
+.health-inspection5 {
+    border: 1px solid transparent;
+    width: 80%;
+    height: 50%;
+    position: absolute;
+    margin-top: 365px;
+    margin-left: 20%
+}
+
+.health-inspection6 {
+    border: 1px solid transparent;
+    width: 100%;
+    height: 50%
+}
+
+.health-inspection6-p {
+    font-size: 70px;
+    color: #FFD600;
+    margin-left: -156px
+}
+
+.health-inspection6-p2 {
+    font-size: 40px;
+    color: #FFD600;
+    margin-left: -102px
+}
+
+.health-inspection7 {
+    border: 1px solid transparent;
+    width: 46%;
+    height: 100%;
+    position: absolute;
+    margin-top: -55.5%;
+    margin-left: 49%
+}
+
+.health-inspection8 {
+    border: 1px solid transparent;
+    width: 70%;
+    height: 50%;
+    margin-top: 175px;
+    margin-left: 100px;
+    text-align: left
+}
+
+.health-inspection8 > img {
+    width: 393px;
+    height: 490px;
+    position: absolute;
+    margin-left: -101px;
+    margin-top: -81px
+}
+
+.health-inspection8-p {
+    color: white;;
+    font-size: 20px;
+    line-height: 50px;
+}
+
+.health-inspection8-p2 {
+    line-height: 50px;
+    color: white;
+    font-size: 20px;
+}
+
+.sport-technology {
+    border: 1px solid transparent;
+    width: 100%;
+    height: 105%;
+}
+
+.sport-technology2 {
+    border: 1px solid transparent;
+    width: 500px;
+    height: 200px;
+    position: absolute;
+    margin-left: 170px;
+}
+
+.sport-technology3 {
+    font-family: 'Arial Black';
+    font-size: 40px;
+    color: #512979;
+    float: left;
+    margin-top: 45px
+}
+
+.sport-technology4 {
+    line-height: 260px;
+    font-size: 40px;
+    color: #9e24c5;
+    position: absolute
+}
+
+.boxscroll-one {
+    width: 99%;
+    height: 95px;
+}
+
+.boxscroll-after2 {
+    border: 1px solid transparent;
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    vertical-align: middle
+}
+
+.boxscroll-after2 > img {
+    width: 100%;
+    height: 100%
+}
+
+.boxscroll-after3 {
+    border: 1px solid transparent;
+    width: 215px;
+    height: 58.5%;
+    display: inline-block;
+    vertical-align: middle
+}
+
+.boxscroll-after3 > p {
+    font-size: 14px
+}
+
+.contact-us {
+    border: 1px solid transparent;
+    width: 100%;
+    height: 100%;
+}
+
+.contact-us2 {
+    border: 1px solid transparent;
+    width: 100%;
+    height: 100%;
+}
+
+.contact-us3 {
+    border: 1px solid transparent;
+    width: 100%;
+    height: 74%;
+    position: absolute
+}
+
+.contact-us4 {
+    border: 1px solid transparent;
+    width: 100%;
+    height: 60%;
+}
+
+.contact-us5 {
+    border: 1px solid transparent;
+    width: 200px;
+    height: 200px;
+    margin-left: 43%;
+    margin-top: 136px
+}
+
+.contact-us5 > img {
+    height: 202px;
+    width: 202px;
+}
+
+.contact-us6 {
+    border: 1px solid transparent;
+    width: 100%;
+    height: 40%;
+}
+
+.contact-us7 {
+    border: 1px solid transparent;
+    width: 800px;
+    height: 100%;
+    margin-left: 10%;
+    margin-left: 275px
+}
+
+.contact-us7 > p {
+    color: white;
+    font-size: 14px;
+    line-height: 66px
+}
+
+.contact-us8 {
+    color: white;
+    font-size: 34px;
+    margin-top: 45px
+}
+
+.contact-us9 {
+    border: 1px solid transparent;
+    width: 1198px;
+    height: 21%;
+    margin-left: 90.5px;
+    opacity: .4;
+    position: absolute;
+    margin-top: 41.5%;
+    background-color: #250044
+}
+
+.contact-us10 {
+    border: 1px solid transparent;
+    width: 800px;
+    height: 159px;
+    margin-left: 280.5px;
+    position: absolute;
+    z-index: 999999;
+    margin-top: 565px
+}
+
+.contact-us10 > p {
+    font-size: 34px;
+    color: white;
+    margin-top: 50px;
+}
+
+.contact-us10-img {
+    width: 1200px;
+    height: 765px;
+    margin-left: 15px
+}
+.swiper-slide{
+    height: 659px
+}

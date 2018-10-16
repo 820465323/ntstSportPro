@@ -6,38 +6,23 @@ var mySwiper = new Swiper('.swiper-container', {
             var nav2 = document.querySelector('#nav-a2');
             var nav3 = document.querySelector('#nav-a3');
             var nav4 = document.querySelector('#nav-a4');
-            var nav5 = document.querySelector('#nav-a5');
             if (translate == '-765') {
                 nav1.style = 'color:yellow';
                 nav2.style = 'color:block';
-                nav3.style = 'color:block';
-                nav4.style = 'color:block';
-                nav5.style = 'color:block';
             }else  if(translate=='-1530'){
                 nav2.style = 'color:yellow';
                 nav1.style = 'color:block';
                 nav3.style = 'color:block';
-                nav4.style = 'color:block';
-                nav5.style = 'color:block';
             }else  if(translate=='-2295'){
                 nav3.style = 'color:yellow';
-                nav1.style = 'color:block';
                 nav2.style = 'color:block';
                 nav4.style = 'color:block';
-                nav5.style = 'color:block';
             }else if(translate=='-3060'){
                 nav4.style = 'color:yellow';
-                nav1.style = 'color:block';
-                nav2.style = 'color:block';
                 nav3.style = 'color:block';
-                nav5.style = 'color:block';
             }
             else if (translate == '0') {
                 nav1.style = 'color:block';
-                nav2.style = 'color:block';
-                nav3.style = 'color:block';
-                nav4.style = 'color:block';
-                nav5.style = 'color:block';
             }
             /*setTimeout(function () {
                 //获取当前模块的索引进行判断
