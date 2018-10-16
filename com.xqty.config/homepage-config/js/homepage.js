@@ -4,7 +4,8 @@
     //三角图动态渐出
 var imgcenter = document.querySelector('#img-center');
 imgcenter.style = 'position: absolute;margin-top: -300px;margin-left: 139px;transform: translateY(-275px);transition:all 1.7s;opacity:1';
-
+var longimg = document.querySelector('.long-img2-1');
+longimg.style='transform: translateX(0%);transition:all 1.7s';
 //每次刷新页面指定跳转路径
 window.onload = function () {
     location.href = "#div1";
