@@ -44,7 +44,7 @@ a {
 
 .swiper-container {
     width: 100%;
-    height: 775px;
+    height: 80%;
     min-width: 1200px;
 }
 
@@ -94,57 +94,6 @@ a {
     display: inline-block;
     height: 100%;
     vertical-align: middle;
-}
-
-.long-img {
-    border: 1px solid transparent;
-    width: 100%;
-    height: 735px;
-    overflow: hidden
-}
-
-.long-img2 {
-    border: 1px solid transparent;
-    width: 100%;
-    height: 735px;
-    overflow: hidden;
-}
-
-.long-img3 {
-    width: 1200px;
-    height: 100%;
-}
-
-.long-img4 {
-    width: 275px;
-    height: 415px;
-    border: 1px solid transparent;
-    position: absolute;
-    margin-top: -172px;
-    margin-left: 6.1%
-}
-
-.long-img5 {
-    height: 420px;
-    width: 294px;
-}
-
-.long-img6 {
-    position: absolute;
-    margin-top: -300px;
-    margin-left: 139px;
-    opacity: 0.1;
-    height: 340px;
-    width: 655px;
-}
-
-.long-img7 {
-    position: absolute;
-    margin-left: 276.9%;
-    z-index: 99999;
-    margin-top: -412px;
-    height: 406px;
-    width: 300px;
 }
 
 #div2 {
@@ -421,7 +370,7 @@ a {
     border: 1px solid transparent;
     width: 200px;
     height: 200px;
-    margin-left: 43%;
+    margin-left: 42%;
     margin-top: 136px
 }
 
@@ -440,8 +389,7 @@ a {
     border: 1px solid transparent;
     width: 800px;
     height: 100%;
-    margin-left: 10%;
-    margin-left: 275px
+    margin-left: 17%;
 }
 
 .contact-us7 > p {
@@ -460,10 +408,10 @@ a {
     border: 1px solid transparent;
     width: 1198px;
     height: 21%;
-    margin-left: 90.5px;
+    margin-left: 15.5px;
     opacity: .4;
     position: absolute;
-    margin-top: 41.5%;
+    margin-top: 49.5%;
     background-color: #250044
 }
 
@@ -471,10 +419,10 @@ a {
     border: 1px solid transparent;
     width: 800px;
     height: 159px;
-    margin-left: 280.5px;
+    margin-left: 205.5px;
     position: absolute;
     z-index: 999999;
-    margin-top: 565px
+    margin-top: 603px
 }
 
 .contact-us10 > p {
@@ -490,4 +438,7 @@ a {
 }
 .swiper-slide{
     height: 659px
+}
+#nav-a4:active{
+    color: yellow;
 }

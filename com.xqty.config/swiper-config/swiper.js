@@ -6,42 +6,46 @@ var mySwiper = new Swiper('.swiper-container', {
             var nav2 = document.querySelector('#nav-a2');
             var nav3 = document.querySelector('#nav-a3');
             var nav4 = document.querySelector('#nav-a4');
-            if (translate == '-765') {
-                nav1.style = 'color:yellow';
-                nav2.style = 'color:block';
-                nav3.style = 'color:block';
-                nav4.style = 'color:block';
-            }else  if(translate=='-1530'){
-                nav2.style = 'color:yellow';
-                nav1.style = 'color:block';
-                nav3.style = 'color:block';
-                nav4.style = 'color:block';
-            }else  if(translate=='-2295'){
-                nav3.style = 'color:yellow';
-                nav1.style = 'color:block';
-                nav2.style = 'color:block';
-                nav4.style = 'color:block';
-            }else if(translate=='-3060'){
-                nav4.style = 'color:yellow';
-                nav1.style = 'color:block';
-                nav2.style = 'color:block';
-                nav3.style = 'color:block';
-            }
-            else if (translate == '0') {
-                nav4.style = 'color:block';
-                nav1.style = 'color:block';
-                nav2.style = 'color:block';
-                nav3.style = 'color:block';
-            }
-            /*setTimeout(function () {
-                //获取当前模块的索引进行判断
-                if (mySwiper.activeIndex == 0) {
-                    mySwiper.mousewheel.disable();
-                } else if (mySwiper.activeIndex != 0) {
-                    console.log('!=0!=0');
-                    mySwiper.mousewheel.enable();
+                if (translate =='-754') {
+                        nav1.style = 'color:yellow';
+                        nav2.style = 'color:block';
+                        nav3.style = 'color:block';
+                        nav4.style = 'color:block';
                 }
-            }, 1);*/
+                if(translate=='-1508'){
+                    nav2.style = 'color:yellow';
+                    nav1.style = 'color:block';
+                    nav3.style = 'color:block';
+                    nav4.style = 'color:block';
+                }
+                if(translate=='-2262'){
+                    nav3.style = 'color:yellow';
+                    nav1.style = 'color:block';
+                    nav2.style = 'color:block';
+                    nav4.style = 'color:block';
+                }
+                if(translate=='-3016'){
+                    nav4.style = 'color:yellow';
+                    nav1.style = 'color:block';
+                    nav2.style = 'color:block';
+                    nav3.style = 'color:block';
+                }
+                if (translate == '0') {
+                    nav4.style = 'color:block';
+                    nav1.style = 'color:block';
+                    nav2.style = 'color:block';
+                    nav3.style = 'color:block';
+                }
+                /*setTimeout(function () {
+                 //获取当前模块的索引进行判断
+                 if (mySwiper.activeIndex == 0) {
+                 mySwiper.mousewheel.disable();
+                 } else if (mySwiper.activeIndex != 0) {
+                 console.log('!=0!=0');
+                 mySwiper.mousewheel.enable();
+                 }
+                 }, 1);*/
+
         }
     },
     //切换方式

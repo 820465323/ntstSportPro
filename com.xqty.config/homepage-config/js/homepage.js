@@ -2,16 +2,16 @@
  * Created by EDZ on 2018/10/16.
  */
     //三角图动态渐出
-var imgcenter = document.querySelector('#img-center');
-imgcenter.style = 'position: absolute;margin-top: -300px;margin-left: 139px;transform: translateY(-275px);transition:all 1.7s;opacity:1';
+var imgcenter = document.querySelector('.img-center');
+imgcenter.style = 'margin-top:9%;transition:all 1.7s;opacity:1';
 
 //越了解越健康字体效果
 var longimg = document.querySelector('.long-img2-1');
-longimg.style='transform: translateX(0%);transition:all .7s';
+longimg.style='margin-top: 25%;transform: translateX(0%);transition:all .7s';
 setTimeout(function () {
-    longimg.style='transform: translateX(10%);transition:all .5s';
+    longimg.style='margin-top: 25%;transform: translateX(10%);transition:all .5s';
     setTimeout(function () {
-        longimg.style='transform: translateX(0%);transition:all 2s';
+        longimg.style='margin-top: 25%;transform: translateX(0%);transition:all 2s';
     },400);
 },500);
 
@@ -19,42 +19,48 @@ setTimeout(function () {
 window.onload = function () {
     location.href = "#div1";
 };
-
+var nav1 = document.querySelector('#nav-a1');
+var nav2 = document.querySelector('#nav-a2');
+var nav3 = document.querySelector('#nav-a3');
+var nav4 = document.querySelector('#nav-a4');
+var nav5 = document.querySelector('#nav-a4');
 //a标签点击高亮效果
 $('#nav-a1').click(function () {
-    $('#nav-a1').style = 'color:yellow;';
-    $('#nav-a2').style = 'color:black;';
-    $('#nav-a3').style = 'color:black;';
-    $('#nav-a4').style = 'color:black;';
-    $('#nav-a5').style = 'color:black;';
+    nav1.style = 'color:yellow;';
+    nav2.style = 'color:black;';
+    nav3.style = 'color:black;';
+    nav4.style = 'color:black;';
+    nav5.style = 'color:black;';
 });
 $('#nav-a2').click(function () {
-    $('#nav-a2').style = 'color:yellow;';
-    $('#nav-a1').style = 'color:black;';
-    $('#nav-a3').style = 'color:black;';
-    $('#nav-a4').style = 'color:black;';
-    $('#nav-a5').style = 'color:black;';
+    nav2.style = 'color:yellow;';
+    nav1.style = 'color:black;';
+    nav3.style = 'color:black;';
+    nav4.style = 'color:black;';
+    nav5.style = 'color:black;';
 });
 $('#nav-a3').click(function () {
-    $('#nav-a3').style = 'color:yellow;';
-    $('#nav-a2').style = 'color:black;';
-    $('#nav-a1').style = 'color:black;';
-    $('#nav-a4').style = 'color:black;';
-    $('#nav-a5').style = 'color:black;';
+    nav3.style = 'color:yellow;';
+    nav1.style = 'color:black;';
+    nav2.style = 'color:black;';
+    nav4.style = 'color:black;';
+    nav5.style = 'color:black;';
 });
 $('#nav-a4').click(function () {
-    $('#nav-a4').style = 'color:yellow;';
-    $('#nav-a2').style = 'color:black;';
-    $('#nav-a3').style = 'color:black;';
-    $('#nav-a1').style = 'color:black;';
-    $('#nav-a5').style = 'color:black;';
+    setTimeout(function () {
+        nav4.style = 'color:yellow;';
+    },10);
+    nav1.style = 'color:black;';
+    nav3.style = 'color:black;';
+    nav2.style = 'color:black;';
+    nav5.style = 'color:black;';
 });
 $('#nav-a5').click(function () {
-    $('#nav-a5').style = 'color:yellow;';
-    $('#nav-a2').style = 'color:black;';
-    $('#nav-a3').style = 'color:black;';
-    $('#nav-a4').style = 'color:black;';
-    $('#nav-a1').style = 'color:black;';
+    nav5.style = 'color:yellow;';
+    nav1.style = 'color:black;';
+    nav3.style = 'color:black;';
+    nav2.style = 'color:black;';
+    nav4.style = 'color:black;';
 });
 
 //禁止用户对页面放大缩小
