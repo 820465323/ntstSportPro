@@ -39,16 +39,16 @@
 
 <div class="swiper-container">
     <div class="swiper-wrapper" style="height: 735px">
-        <div class="swiper-slide"  id="div1" data-hash="div1">
+        <div class="swiper-slide" id="div1" data-hash="div1">
             <!--长图首页第一板块-->
             <div class="long-img">
                 <div class="long-img2">
                     <div style="position: absolute;width: 667px;height: 345px;border: 1px solid transparent;margin-left: 44.9%;margin-top: 14%;overflow: hidden">
-                        <img class="long-img2-1" src="../com.xqty.config/img-config/18.png" style="height: 100%;width: 100%;margin-left: 100%;opacity: .1"/>
+                        <img class="long-img2-1" src="../com.xqty.config/img-config/18.png"
+                             style="height: 100%;width: 100%;margin-left: 100%;opacity: .1"/>
                     </div>
                     <img class="long-img3" src="../com.xqty.config/img-config/1.jpg">
                 </div>
-a
                 <div class="long-img4">
                     <img class="long-img5" src="../com.xqty.config/img-config/4.png"/>
                     <img class="long-img6" id="img-center" src="../com.xqty.config/img-config/5.png"/>
@@ -104,15 +104,15 @@ a
                         </div>
                     </div>
                     <div class="health-inspection7">
-                        <div class="health-inspection8" >
+                        <div class="health-inspection8">
                             <img src="../com.xqty.config/img-config/10.png"/>
                             <p class="health-inspection8-p">营 造 一 流 的 线 下 健 康 服 务</p>
-                            <p class="health-inspection8-p2" >汇 聚 国 际 先 进 的 体 育 科 技 服 务</p>
-                            <p class="health-inspection8-p2" >打 造 符 合 国 人 特 点 的 健 康 服 务 产 品</p>
-                            <p class="health-inspection8-p2" >设 计 科 学 的 健 康 管 理 标 准 和 体 系</p>
-                            <p class="health-inspection8-p2" >塑 造 全 新 的 健 康 管 理 理 念</p>
-                            <p class="health-inspection8-p2" >培 养 全 面 的 健 康 管 理 人 才</p>
-                            <p class="health-inspection8-p2" >建 设 基 于 AI 大 数 据 健 康 管 理 平 台</p>
+                            <p class="health-inspection8-p2">汇 聚 国 际 先 进 的 体 育 科 技 服 务</p>
+                            <p class="health-inspection8-p2">打 造 符 合 国 人 特 点 的 健 康 服 务 产 品</p>
+                            <p class="health-inspection8-p2">设 计 科 学 的 健 康 管 理 标 准 和 体 系</p>
+                            <p class="health-inspection8-p2">塑 造 全 新 的 健 康 管 理 理 念</p>
+                            <p class="health-inspection8-p2">培 养 全 面 的 健 康 管 理 人 才</p>
+                            <p class="health-inspection8-p2">建 设 基 于 AI 大 数 据 健 康 管 理 平 台</p>
                         </div>
                     </div>
                 </div>
@@ -121,9 +121,9 @@ a
 
         <!--体育科技-->
         <div class="swiper-slide" id="div4" data-hash="div4">
-            <div class="sport-technology" >
+            <div class="sport-technology">
                 <!--滚动轴前方字体-->
-                <div class="sport-technology2" >
+                <div class="sport-technology2">
                     <div class="sport-technology3">
                         THU
                     </div>
@@ -136,13 +136,13 @@ a
                  </div>-->
                 <div id="boxscroll-0">
                     <div id="boxscroll">
-                        <div class="boxscroll-one" >
+                        <div class="boxscroll-one">
                             <div class="boxscroll-after">
                                 <div class="boxscroll-after2">
 
                                     <img src="../com.xqty.config/img-config/14.jpg"/>
                                 </div>
-                                <div class="boxscroll-after3" >
+                                <div class="boxscroll-after3">
                                     <p>2018 平昌冬奥会的科技力量</p>
                                 </div>
                             </div>
@@ -153,7 +153,7 @@ a
                                     <img src="../com.xqty.config/img-config/15.jpg"/>
                                 </div>
                                 <div class="boxscroll-after3">
-                                    <p >2NIKE与NBA的球衣革命:用手机APP点触球衣获取最新球......</p>
+                                    <p>2NIKE与NBA的球衣革命:用手机APP点触球衣获取最新球......</p>
                                 </div>
                             </div>
                         </div>
@@ -191,7 +191,7 @@ a
                         </div>
                     </div>
                 </div>
-                <div style="margin-top: 48.5%;position: absolute;margin-left: 170px;font-size: 20px;color: #512979;">
+                <div style="margin-top: 46.5%;position: absolute;margin-left: 170px;font-size: 20px;color: #512979;">
                     <p style="font-weight: bold">Sports Technology Review</p>
                 </div>
                 <!--滚动轴结束-->
@@ -245,10 +245,110 @@ a
 <script src="../com.xqty.config/node_modules/jquery/dist/jquery.js"></script>
 <script src="../com.xqty.config/homepage-config/js/homepage.js"></script>
 <script>
-    if(window.screen.width=='1366'){
-        console.log('屏幕高度'+window.screen.height);
-        var proa = document.querySelector('a');
-            /*proa.style='color:green;'*/
+    var navdiv4 = document.querySelector('.nav-div4');
+    var longimg2 = document.querySelector('.long-img2');
+    var longimg4 = document.querySelector('.long-img4');
+    var longimg6 = document.querySelector('.long-img6');
+    var longimg7 = document.querySelector('.long-img7');
+    //判断浏览器缩放程度(进入页面执行一次)
+    if (document.documentElement && document.documentElement.clientHeight && document.documentElement.clientWidth)
+    {
+        winHeight = document.documentElement.clientHeight;
+        console.log('winHeight='+winHeight);
+        winWidth = document.documentElement.clientWidth;
+        console.log('winWidth='+winWidth);
+        if(winWidth>='1500'&&winWidth<=1600){
+            longimg4.style='margin-left:10.52%';
+            longimg2.style='height:790px';
+            navdiv4.style='margin-right:240px';
+        }
+    }
+
+    //监听浏览器缩放比例
+    window.onresize = function(){
+        alert('此时浏览器宽度'+this.innerWidth+'此时浏览器高度'+this.innerHeight);
+
+        if(this.innerWidth>='1500'&&this.innerWidth<='1600'){
+            alert('此时浏览器宽度'+this.innerWidth+'此时浏览器高度'+this.innerHeight);
+                longimg4.style='margin-left:10.52%';
+                longimg2.style='height:790px';
+                navdiv4.style='margin-right:240px';
+        }else if(this.innerWidth>='1300'&&this.innerWidth<='1400'){
+            alert('此时浏览器宽度'+this.innerWidth+'此时浏览器高度'+this.innerHeight);
+                longimg4.style='margin-left:6.1%';
+                longimg2.style='height:735px';
+                navdiv4.style='margin-right:159px';
+        }else if(this.innerWidth>='1650'&&this.innerWidth<='1750'){
+            alert('此时浏览器宽度'+this.innerWidth+'此时浏览器高度'+this.innerHeight);
+        }
+    };
+
+    function browserRedirect() {
+        var sUserAgent = navigator.userAgent.toLowerCase();
+        var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+        var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+        var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+        var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+        var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+        var bIsAndroid = sUserAgent.match(/android/i) == "android";
+        var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+        var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+        if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+            console.log('phone');
+        } else {
+            console.log('pc');
+        }
+    }
+    browserRedirect();
+
+    //判断浏览器类型
+    function myBrowser() {
+        var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
+        var isOpera = userAgent.indexOf("Opera") > -1;
+        if (isOpera) {
+            return "Opera"
+        }
+        ;
+        //判断是否Opera浏览器
+        if (userAgent.indexOf("Firefox") > -1) {
+            return "FF";
+        }
+        //判断是否Firefox浏览器
+        if (userAgent.indexOf("Chrome") > -1) {
+            return "Chrome";
+        }
+        if (userAgent.indexOf("Safari") > -1) {
+            return "Safari";
+        }
+        //判断是否Safari浏览器
+        if (userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 && !isOpera) {
+            return "IE";
+        }
+        ; //判断是否IE浏览器
+    }
+
+    //以下是调用上面的函数
+    var mb = myBrowser();
+    if ("IE" == mb) {
+        alert('IE浏览器');
+        var longimg4 = document.getElementsByClassName('.long-img4');
+        longimg4.style = 'margin-left:8.3%';
+        var longimg6 = document.getElementsByClassName('.long-img6');
+        longimg6.style = 'margin-left:-33px;margin-top:-173px;opacity:1';
+        var longimg7 = document.getElementsByClassName('.long-img7');
+        longimg7.style = 'margin-left:217.9%;margin-top:-37px;';
+    }
+    if ("FF" == mb) {
+        console.log("Firefox浏览器");
+    }
+    if ("Chrome" == mb) {
+        console.log("Chrome浏览器");
+    }
+    if ("Opera" == mb) {
+        console.log("Opera浏览器");
+    }
+    if ("Safari" == mb) {
+        console.log("Safari浏览器");
     }
 </script>
 </html>
