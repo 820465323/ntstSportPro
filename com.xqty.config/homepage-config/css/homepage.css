@@ -98,7 +98,6 @@ a {
 
 #div2 {
     height: 735px;
-    overflow: scroll;
 }
 
 .about-us {
@@ -271,9 +270,17 @@ a {
 }
 
 .health-inspection8-p {
+     color: white;;
+     font-size: 20px;
+     line-height: 50px;
+     opacity: 0;
+ }
+
+.health-inspection8-p2 {
     color: white;;
     font-size: 20px;
     line-height: 50px;
+    opacity: 0;
 }
 
 .health-inspection8-p2 {
@@ -441,4 +448,23 @@ a {
 }
 #nav-a4:active{
     color: yellow;
+}
+.homepage-one{
+    border: 1px solid transparent;width: 1200px;height: 755px;margin: auto;
+    background-image: url('../../img-config/1.jpg')
+}
+.homepage-two{
+    width: 50%;height:345px;border: 1px solid transparent;margin-left: 45%;margin-top: 3%
+}
+.homepage-three{
+    border: 1px solid transparent;width: 100%;height: 300px;font-size: 0;letter-spacing: -3px;float: left
+}
+.homepage-four{
+    border: 1px solid transparent;width: 19.6%;height: 100%;display: inline-block;margin-left: -7px;vertical-align: middle
+}
+.homepage-five{
+    width: 60%;height: 100%;border: 1px solid transparent;display: inline-block;vertical-align: middle
+}
+.homepage-six{
+    border: 1px solid transparent;width: 19.6%;height: 100%;display: inline-block;vertical-align: middle
 }

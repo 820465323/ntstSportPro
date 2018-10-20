@@ -7,10 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>新清泰克</title>
     <link rel="stylesheet" href="../com.xqty.config/swiper-config/css/swiper-4.3.5.min.css">
-    <link rel="stylesheet" href="../com.xqty.config/homepage-config/css/homepage-1366.css">
+    <link rel="stylesheet" href="../com.xqty.config/homepage-config/css/homepage.css">
 </head>
 <body style="font-family: 微软雅黑">
-
 <div class="swiper-container" style="height: 754px;width: 1200px">
 <!--导航栏-->
 <div style="border: 1px solid transparent;width: 1200px;z-index: 999999;position: fixed;margin: auto;text-align: right;margin-top: 50px;margin-left: -75px">
@@ -34,24 +33,25 @@
         后台检测
     </a>
 </div>
+    <!--content-->
     <div class="swiper-wrapper" style="height: 735px">
         <!--首页-->
         <div class="swiper-slide" id="div1" data-hash="div1">
-            <div style="border: 1px solid transparent;width: 1200px;height: 755px;margin: auto;background-image: url('../com.xqty.config/img-config/1.jpg')">
+            <div class="homepage-one">
                 <!--越了解越健康-->
-                <div style="width: 50%;height:345px;border: 1px solid transparent;margin-left: 45%;margin-top: 3%">
+                <div class="homepage-two">
                     <img class="long-img2-1" src="../com.xqty.config/img-config/18.png"
                          style="height: 100%;width: 100%;opacity: 1;margin-top: 25%;transition:all .7s;margin-right: -100%"/>
                 </div>
-                <div style="border: 1px solid transparent;width: 100%;height: 300px;font-size: 0;letter-spacing: -3px;float: left">
-                    <div style="border: 1px solid transparent;width: 19.6%;height: 100%;display: inline-block;margin-left: -7px;vertical-align: middle">
+                <div class="homepage-three" >
+                    <div class="homepage-four">
 
                         <img src="../com.xqty.config/img-config/4.png" style="width: 100%;height: 100%;margin-top: 97%"/>
                     </div>
-                    <div style="width: 60%;height: 100%;border: 1px solid transparent;display: inline-block;vertical-align: middle">
+                    <div class="homepage-five" >
                         <img class="img-center" src="../com.xqty.config/img-config/5.png" style="width: 655px;height: 340px;margin-top: 50%;"/>
                     </div>
-                    <div style="border: 1px solid transparent;width: 19.6%;height: 100%;display: inline-block;vertical-align: middle">
+                    <div class="homepage-six" >
                         <img src="../com.xqty.config/img-config/6.png" style="width: 102%;height: 100%;margin-top: 114%"/>
                     </div>
                 </div>
@@ -61,7 +61,7 @@
         <!--关于我们-->
         <div class="swiper-slide swiper-no-swiping" id="div2" data-hash="div2">
             <!--关于我们-->
-            <div class="about-us">
+            <div class="">
                 <div class="about-us1">
                     <div class="about-us2">
                         <div class="about-us3">
@@ -77,10 +77,10 @@
                     <div class="about-us6">
                         <div class="about-us7">
                             <div class="about-us8">
-                                <p>新 清 泰 克 是 前 沿 的 体 育 科技公司，创立于清华科技园，致力于体育与</p>
-                                <p class="about-us8-p">科技的融合，新清认为科技是体育产业发展的源动力，将前沿科技应用于体</p>
-                                <p>育产业，将竞技领域的技术民用化，既科技助力竞技体育，实现更高、更快、</p>
-                                <p class="about-us-p2">更强，也服务于大众健康，帮助更多普通人身心获益，实现健康中国的使命。</p>
+                                <p class="about-us8-p0" style="margin-left: -150%">新 清 泰 克 是 前 沿 的 体 育 科技公司，创立于清华科技园，致力于体育与</p>
+                                <p class="about-us8-p" style="margin-left: -150%">科技的融合，新清认为科技是体育产业发展的源动力，将前沿科技应用于体</p>
+                                <p class="about-us8-p1" style="margin-left: -150%">育产业，将竞技领域的技术民用化，既科技助力竞技体育，实现更高、更快、</p>
+                                <p class="about-us-p2" style="margin-left: -150%">更强，也服务于大众健康，帮助更多普通人身心获益，实现健康中国的使命。</p>
                             </div>
                         </div>
                     </div>
@@ -107,13 +107,13 @@
                     <div class="health-inspection7">
                         <div class="health-inspection8">
                             <img src="../com.xqty.config/img-config/10.png"/>
-                            <p class="health-inspection8-p">营 造 一 流 的 线 下 健 康 服 务</p>
-                            <p class="health-inspection8-p2">汇 聚 国 际 先 进 的 体 育 科 技 服 务</p>
-                            <p class="health-inspection8-p2">打 造 符 合 国 人 特 点 的 健 康 服 务 产 品</p>
-                            <p class="health-inspection8-p2">设 计 科 学 的 健 康 管 理 标 准 和 体 系</p>
-                            <p class="health-inspection8-p2">塑 造 全 新 的 健 康 管 理 理 念</p>
-                            <p class="health-inspection8-p2">培 养 全 面 的 健 康 管 理 人 才</p>
-                            <p class="health-inspection8-p2">建 设 基 于 AI 大 数 据 健 康 管 理 平 台</p>
+                            <p class="health-inspection8-p" id="p1">营 造 一 流 的 线 下 健 康 服 务</p>
+                            <p class="health-inspection8-p2" id="p2">汇 聚 国 际 先 进 的 体 育 科 技 服 务</p>
+                            <p class="health-inspection8-p2" id="p3">打 造 符 合 国 人 特 点 的 健 康 服 务 产 品</p>
+                            <p class="health-inspection8-p2" id="p4">设 计 科 学 的 健 康 管 理 标 准 和 体 系</p>
+                            <p class="health-inspection8-p2" id="p5">塑 造 全 新 的 健 康 管 理 理 念</p>
+                            <p class="health-inspection8-p2" id="p6">培 养 全 面 的 健 康 管 理 人 才</p>
+                            <p class="health-inspection8-p2" id="p7">建 设 基 于 AI 大 数 据 健 康 管 理 平 台</p>
                         </div>
                     </div>
                 </div>
@@ -242,109 +242,5 @@
 </body>
 <script src="../com.xqty.config/swiper-config/js/swiper-4.3.5.min.js"></script>
 <script src="../com.xqty.config/swiper-config/swiper.js"></script>
-<script src="../com.xqty.config/node_modules/jquery/dist/jquery.js"></script>
 <script src="../com.xqty.config/homepage-config/js/homepage.js"></script>
-<script>
-
-
-    //判断浏览器缩放程度(进入页面执行一次)
-   /* if (document.documentElement && document.documentElement.clientHeight && document.documentElement.clientWidth)
-    {
-        winHeight = document.documentElement.clientHeight;
-        console.log('winHeight='+winHeight);
-        winWidth = document.documentElement.clientWidth;
-        console.log('winWidth='+winWidth);
-        if(winWidth>='1500'&&winWidth<=1600){
-            longimg4.style='margin-left:10.52%';
-            longimg2.style='height:790px';
-            navdiv4.style='margin-right:240px';
-        }
-    }*/
-
-    //监听浏览器缩放比例
-    /*window.onresize = function(){
-        alert('此时浏览器宽度'+this.innerWidth+'此时浏览器高度'+this.innerHeight);
-
-        if(this.innerWidth>='1500'&&this.innerWidth<='1600'){
-            alert('此时浏览器宽度'+this.innerWidth+'此时浏览器高度'+this.innerHeight);
-                longimg4.style='margin-left:10.52%';
-                longimg2.style='height:790px';
-                navdiv4.style='margin-right:240px';
-        }else if(this.innerWidth>='1300'&&this.innerWidth<='1400'){
-            alert('此时浏览器宽度'+this.innerWidth+'此时浏览器高度'+this.innerHeight);
-                longimg4.style='margin-left:6.1%';
-                longimg2.style='height:735px';
-                navdiv4.style='margin-right:159px';
-        }else if(this.innerWidth>='1650'&&this.innerWidth<='1750'){
-            alert('此时浏览器宽度'+this.innerWidth+'此时浏览器高度'+this.innerHeight);
-        }
-    };*/
-
-    function browserRedirect() {
-        var sUserAgent = navigator.userAgent.toLowerCase();
-        var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
-        var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
-        var bIsMidp = sUserAgent.match(/midp/i) == "midp";
-        var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
-        var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
-        var bIsAndroid = sUserAgent.match(/android/i) == "android";
-        var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
-        var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
-        if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
-            alert('phone');
-        } else {
-            alert('pc');
-        }
-    }
-    browserRedirect();
-
-    //判断浏览器类型
-    function myBrowser() {
-        var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
-        var isOpera = userAgent.indexOf("Opera") > -1;
-        if (isOpera) {
-            return "Opera"
-        }
-        //判断是否Opera浏览器
-        if (userAgent.indexOf("Firefox") > -1) {
-            return "FF";
-        }
-        //判断是否Firefox浏览器
-        if (userAgent.indexOf("Chrome") > -1) {
-            return "Chrome";
-        }
-        if (userAgent.indexOf("Safari") > -1) {
-            return "Safari";
-        }
-        //判断是否Safari浏览器
-        if (userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 && !isOpera) {
-            return "IE";
-        }
-        ; //判断是否IE浏览器
-    }
-
-    //以下是调用上面的函数
-    var mb = myBrowser();
-    if ("IE" == mb) {
-        alert('IE浏览器');
-        var longimg4 = document.getElementsByClassName('.long-img4');
-        longimg4.style = 'margin-left:8.3%';
-        var longimg6 = document.getElementsByClassName('.long-img6');
-        longimg6.style = 'margin-left:-33px;margin-top:-173px;opacity:1';
-        var longimg7 = document.getElementsByClassName('.long-img7');
-        longimg7.style = 'margin-left:217.9%;margin-top:-37px;';
-    }
-    if ("FF" == mb) {
-        console.log("Firefox浏览器");
-    }
-    if ("Chrome" == mb) {
-        console.log("Chrome浏览器");
-    }
-    if ("Opera" == mb) {
-        console.log("Opera浏览器");
-    }
-    if ("Safari" == mb) {
-        console.log("Safari浏览器");
-    }
-</script>
 </html>
